@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.footer__title {
+  @include mq("md") {
+    display: flex;
+  }
+}

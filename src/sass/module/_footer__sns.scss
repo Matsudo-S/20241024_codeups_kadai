@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.footer__sns {
+  display: flex;
+  margin-left: rem(-8);
+  @include mq("md") {
+    margin-left: rem(40);
+    margin-top: rem(38);
+  }
+}

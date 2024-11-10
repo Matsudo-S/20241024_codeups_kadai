@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.footer__menu-lists {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: rem(12);
+}

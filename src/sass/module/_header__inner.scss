@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.header__inner {
+  align-items: center;
+  display: flex;
+  height: inherit;
+  justify-content: space-between;
+  padding: 0 rem(15);
+  // @include mq("md") {
+  //   // padding: 0 rem(20);
+  // }
+}
+

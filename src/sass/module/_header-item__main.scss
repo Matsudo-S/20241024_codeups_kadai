@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.header-item__main {
+  color: $white_pure;
+  font-family: $second-font-family;
+  font-size: rem(18);
+  text-transform: capitalize;
+  line-height: 1;
+}

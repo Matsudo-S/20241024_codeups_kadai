@@ -112,6 +112,7 @@ select::-ms-expand {
 }
 
 /* ホバー */
+// aタグには標準でホバーアニメーションが付与されるようにする
 a {
   text-decoration: none;
   color: inherit;

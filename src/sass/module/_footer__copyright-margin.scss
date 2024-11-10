@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.footer__copyright-margin {
+  margin-top: rem(40);
+  text-align: center;
+  white-space: nowrap;
+}

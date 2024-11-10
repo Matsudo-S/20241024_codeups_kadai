@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.drawer-menu {
+  background-color: $main-accent-color;
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 4000;
+  overflow-y: auto;
+}

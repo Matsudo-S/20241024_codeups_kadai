@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.header-item__main--upper {
+  color: $white_pure;
+  font-family: $second-font-family;
+  font-size: rem(18);
+  text-transform: uppercase;
+  line-height: 1;
+
+}

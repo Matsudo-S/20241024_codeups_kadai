@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.header-item__links {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 rem(20);
+}
+
+.header-item__links a:hover {
+  opacity: 0.7;
+}

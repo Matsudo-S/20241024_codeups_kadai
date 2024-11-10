@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.drawer-menu__inner {
+  align-items: center;
+  height: inherit;
+  justify-content: center;
+  width: 100%;
+  min-height: rem(700);
+  display: flex;
+  flex-direction: column;
+}

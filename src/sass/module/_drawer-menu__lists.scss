@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.drawer-menu__lists {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: rem(33);
+}
