@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.information__img {
+  max-width: rem(345);
+  aspect-ratio: 345 / 227;
+  @include mq("md") {
+    max-width: rem(540);
+    aspect-ratio: 540 / 356;
+  } 
+}

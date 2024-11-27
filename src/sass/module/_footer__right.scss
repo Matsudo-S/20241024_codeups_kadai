@@ -2,7 +2,9 @@
 
 .footer__right {
   display: block;
+  margin-left: rem(16);
   @include mq("md") {
     display: flex;
+    margin-left: rem(0);
   }
 }

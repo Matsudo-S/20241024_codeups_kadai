@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.contact__section-title-main {
+  line-height: 1;
+  font-size: rem(80);
+  font-family: $second-font-family;
+  font-weight: $regular;
+}
+
+.contact__section-title-main::first-letter {
+  text-transform: capitalize;
+  color: $main-accent-color;
+}

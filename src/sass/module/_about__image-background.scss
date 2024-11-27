@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.about__image-background {
+  width: 81.5%;
+  min-height: rem(186);
+  aspect-ratio: 281 / 186;
+  object-fit: cover;
+  z-index: -1;
+  position: relative;
+  margin-left: auto;
+  margin-top: rem(-168);
+  @include mq(md){
+    min-height: rem(581);
+    aspect-ratio: 880 / 581;
+    margin-top: rem(-527);
+  }
+}

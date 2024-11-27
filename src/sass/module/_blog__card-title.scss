@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.blog__card-title {
+  font-size: rem(16);
+  line-height: 1.5;
+  font-weight: $medium;
+  padding-bottom: rem(4);
+  @include mq("md") {
+    padding-bottom: rem(2);
+  }
+}

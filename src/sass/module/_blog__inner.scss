@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.blog__inner {
+  position: relative;
+}
+
+.blog__inner::before {
+  @include mq("md") {
+    content: "";
+    background-image: url(../../assets/images/common/common_fishes_white.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(437);
+    aspect-ratio: 437 / 201;
+    position: absolute;
+    left: rem(-55);
+    top: rem(-74);
+
+  }
+}

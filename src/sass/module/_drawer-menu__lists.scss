@@ -3,5 +3,6 @@
 .drawer-menu__lists {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: rem(33);
+  column-gap: rem(12.9);
+  padding-bottom: rem(76);
 }

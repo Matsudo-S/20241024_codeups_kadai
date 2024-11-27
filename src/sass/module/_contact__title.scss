@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.contact__title {
+  margin-top: rem(-5);
+  margin-left: rem(-7);
+  @include mq("md") {
+    margin: 0 rem(15);
+  }
+  
+}

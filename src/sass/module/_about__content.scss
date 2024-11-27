@@ -1,0 +1,13 @@
+@use "global" as *;
+
+// pcの時だけabsoluteで配置
+.about__content {
+  @include mq("md") {
+    position: absolute;
+    display: flex;
+    gap: rem(40);
+    top: rem(305);
+    right: rem(66);
+  }
+}
+

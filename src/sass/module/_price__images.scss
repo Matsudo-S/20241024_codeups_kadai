@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.price__images {
+  width: 100%;
+  @include mq("md") {
+    width: 45.5%;
+  }
+}

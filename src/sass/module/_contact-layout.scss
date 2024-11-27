@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.contact-layout {
+  margin-top: rem(70);
+  padding-bottom: rem(75);
+  position: relative;
+  @include mq("md") {
+    margin-top: rem(140);
+    padding-bottom: rem(160);
+  }
+}
+
+.contact-layout::before {
+  content: "";
+  position: absolute;
+  top: rem(-20);
+  right: rem(148);
+  width: rem(109);
+  height: rem(50);
+  background-image: url(../../assets/images/common/common_fishes_left.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include mq("md") {
+    top: rem(-40);
+    width: rem(301);
+    height: rem(138);
+    right: rem(81);
+  }
+}

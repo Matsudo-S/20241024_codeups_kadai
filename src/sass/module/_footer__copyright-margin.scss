@@ -1,7 +1,10 @@
 @use "global" as *;
 
 .footer__copyright-margin {
-  margin-top: rem(40);
+  margin-top: rem(30);
   text-align: center;
   white-space: nowrap;
+  @include mq("md") {
+    margin-top: rem(40);
+  }
 }

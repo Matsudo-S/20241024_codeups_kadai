@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.contact-information__item {
+  line-height: 1.9;
+  font-weight: $regular;
+  font-size: rem(14);
+  letter-spacing: 0.01rem;
+  @include mq("md") {
+    letter-spacing: 0;
+    line-height: 1.4;
+    font-size: rem(16);  
+  }
+}
+
+// 電話番号について、PCでは発信できないようにする
+.contact-information__item a[href^="tel:"] {
+  pointer-events: auto;
+  @include mq("md") {
+    pointer-events: none;
+  }
+}
+
+.contact-information__item:not(:first-child) {
+  @include mq("md") {
+    margin-top: rem(5.5);
+    letter-spacing: -0.07em;
+  }
+  
+}

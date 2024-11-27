@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.slick-prev {
+  display: none;
+  @include mq("md") {
+    width: rem(80);
+    height: rem(80);
+    border: 1px solid $main-accent-color;
+    border-radius: 9999px;
+    position: absolute;
+    display: block;
+    margin: 0;
+    transition: 0.6s;
+    cursor: pointer;
+    top: rem(-106);
+    right: calc(34% - rem(90));
+  }
+}
+
+.slick-prev:hover{
+  opacity: 0.7;
+}

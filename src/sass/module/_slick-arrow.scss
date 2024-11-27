@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.slick-arrow {
+  position: relative;
+}
+
+.slick-arrow::before{
+  content: "";
+  height: rem(6);
+  position: absolute;
+  width: rem(40);
+  top: rem(37);
+}
+
+.slick-prev.slick-arrow::before{
+  border-bottom: 1px solid $main-accent-color;
+  border-left: 1px solid $main-accent-color;
+  transform: skew(-47deg);
+  left: rem(21);
+}
+
+.slick-next.slick-arrow::before{
+  border-bottom: 1px solid $main-accent-color;
+  border-right: 1px solid $main-accent-color;
+  transform: skew(47deg);
+  right: rem(21);
+}

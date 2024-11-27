@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.about__body {
+  margin-top:  rem(21);
+  @include mq("md") {
+    margin-top:  0;
+    width: rem(400);
+  }
+}

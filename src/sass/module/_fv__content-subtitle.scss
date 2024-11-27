@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.fv__content-subtitle {
+  color: $white_pure;
+  font-family: $second-font-family;
+  font-size: rem(20); 
+  font-weight: $normal;
+  letter-spacing: 0rem;
+  line-height: 1;
+  margin-right: rem(25);
+  @include mq("md") {
+    line-height: 3.2;
+    margin-top: rem(6);
+    margin-right: rem(45);
+  }
+}

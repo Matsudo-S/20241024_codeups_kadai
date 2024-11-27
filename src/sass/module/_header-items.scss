@@ -3,4 +3,7 @@
 .header-items {
   display: flex;
   height: inherit;
+  @include mq("md") {
+    padding-right: rem(20);
+  }
 }

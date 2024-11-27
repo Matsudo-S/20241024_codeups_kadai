@@ -1,7 +1,15 @@
 @use "global" as *;
 
 .sns-icon {
-  width: rem(48);
-  height: rem(48);
+  width: rem(40);
+  height: rem(40);
   padding: rem(8);
+  @include mq("md") {
+    width: rem(48);
+    height: rem(48);
+  }
+}
+
+.sns-icon:hover {
+  opacity: 0.7;
 }

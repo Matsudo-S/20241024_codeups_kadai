@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.campaign-card__price-current {
+  font-size: rem(32);
+  color: $main-accent-color;
+  line-height: 1;
+  @include mq(md){
+    font-size: rem(40);
+  }
+}

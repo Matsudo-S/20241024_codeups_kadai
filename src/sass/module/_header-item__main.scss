@@ -4,6 +4,13 @@
   color: $white_pure;
   font-family: $second-font-family;
   font-size: rem(18);
-  text-transform: capitalize;
   line-height: 1;
+}
+
+.header-item__main::first-letter {
+  text-transform: uppercase;
+}
+
+.header-item__main.header-item__main--upper {
+  text-transform: uppercase;
 }

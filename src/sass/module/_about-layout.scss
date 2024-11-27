@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.about-layout {
+  margin-top: rem(80);
+  margin-bottom: rem(70);
+  @include mq("md") {
+    margin-top: rem(140);
+    margin-bottom: rem(164);
+    position: relative;
+  }
+}
+
+.about-layout::before {
+  @include mq(md){
+    content: "";
+    background-image: url(../../assets/images/common/common_sango.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(194);
+    height: rem(181);
+    position: absolute;
+    right: rem(81);
+    bottom: rem(-90);
+  }
+}

@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.btn {
+  display: inline-block;
+  position: relative;
+}
+
+.btn::after {
+  content: "";
+  display: block;
+  width: rem(202);
+  height: rem(54);
+  border: 1px solid $main-accent-color;
+  position: absolute;
+  left: rem(3);
+  top: rem(4);
+}

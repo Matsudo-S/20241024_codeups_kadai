@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.campaign-card__content {
+  padding: rem(16) rem(16) rem(24);
+  @include mq(md){
+    padding: rem(24) rem(16) rem(40);
+  }
+}

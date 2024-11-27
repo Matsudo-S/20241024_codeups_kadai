@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.card__title {
+  color: $main-font-color;
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: 1.5;
+  margin-top: rem(4);
+  padding-bottom: rem(4);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 制限したい行数が3の場合 */
+  line-clamp: 3;
+  overflow: hidden;
+  @include mq("md") {
+    font-size: rem(24);
+    margin-bottom: rem(8);
+    margin-top: rem(8);
+  }
+}
+

@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.about__image {
+  margin-bottom: rem(41);
+  position: relative;
+  @include mq(md){
+    margin-bottom: 0;
+  }
+}

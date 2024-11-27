@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.contact__contents {
+  display: block;
+  padding: rem(0) rem(25);
+  @include mq("md") {
+    display: flex;
+    width: 100%;
+    padding-top: rem(71);
+    padding-bottom: rem(64);
+    padding-left: rem(51);
+    padding-right: rem(96);
+    box-shadow: 4px 4px 10px 0px $off_white;
+  }
+}

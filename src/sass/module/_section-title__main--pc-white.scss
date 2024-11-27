@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.section-title__main.section-title__main--pc-white {
+  @include mq("md") {
+    color: $white_pure;
+  }
+}
+
+.section-title__main.section-title__main--pc-white::first-letter {
+  color: $main-accent-color;
+  @include mq("md") {
+    color: $white_pure;
+  }
+}

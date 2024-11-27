@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.card__label-license {
+  text-align: center;
+  width: fit-content;
+  font-weight: $regular;
+  font-size: rem(12);
+  line-height: 1.833;
+  color: $main-accent-color;
+  padding: rem(4) rem(12);
+  border: 1px solid $main-accent-color;
+  @include mq("md") {
+    padding: rem(6) rem(16);
+  }
+}

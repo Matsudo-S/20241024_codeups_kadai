@@ -1,15 +1,17 @@
 @use "global" as *;
 
-h2 .fv__title-main {
+.fv__content-title {
   color: $white_pure;
   font-family: $font-family-lato;
   font-size: rem(40);
-  font-weight: $normal;
-  letter-spacing: 1.54rem;
+  font-weight: $regular;
+  letter-spacing: 1.34rem;
   line-height: 1.6;
+  text-transform: uppercase;
   @include mq("md") {
   font-size: rem(80);
   line-height: 0.8;  
+  letter-spacing: 2.62rem;
   }
 }
 

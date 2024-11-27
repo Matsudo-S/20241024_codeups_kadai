@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.fv__content {
+  position: absolute;
+  text-align: center;
+  top: 49%;
+  left: 52.7%;
+  z-index: 100;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: all 0.7s ease;
+  @include mq("md") {
+    top: 52%;
+    left: 51.5%;
+  }
+}
+
+.fv__content.js-visible--loading {
+  transition: opacity 2s;
+  opacity: 1;
+  color: $main-accent-color;
+}
+
+.fv__content.js-visible {
+  transition: opacity 2s;
+  opacity: 1;
+}
+
+.fv__content.js-hidden {
+  opacity: 0;
+}
+

@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.btn__layout--center {
+  margin-top: rem(40);
+  display: flex;
+  justify-content: center;
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.btn__layout--center .btn {
+  display: inline-block;
+}

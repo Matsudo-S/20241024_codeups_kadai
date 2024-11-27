@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.card {
+  padding: rem(15) rem(16);
+  box-shadow: 4px 4px 10px 0px $off_white;
+  @include mq("md") {
+    padding: rem(24);
+  }
+}

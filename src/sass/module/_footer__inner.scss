@@ -3,8 +3,8 @@
 .footer__inner {
   width: 100%;
   background-color: $main-accent-color;
-  padding: rem(48) rem(15) rem(56);
+  padding: rem(49) rem(15) rem(56);
   @include mq("md") {
-    padding: rem(80) rem(40);
+    padding: rem(73) rem(40);
   }
 }
