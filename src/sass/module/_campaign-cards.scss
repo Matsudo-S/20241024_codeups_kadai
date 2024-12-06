@@ -1,5 +1,8 @@
 @use "global" as *;
 
 .campaign-cards {
-  margin-right: calc(50% - 50vw);
+  margin-right: calc(50% - 48.2vw);
+  @include mq("md") {
+    margin-right: calc(50% - 49vw);
+  }
 }

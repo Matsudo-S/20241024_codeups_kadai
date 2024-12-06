@@ -6,3 +6,12 @@
     width: 45.5%;
   }
 }
+
+.price__images img,
+.price__images picture {
+  aspect-ratio: 345 / 227;
+  @include mq("md") {
+    aspect-ratio: 492 / 746;
+    
+  }
+}

@@ -14,16 +14,17 @@
   content: "";
   position: absolute;
   top: rem(-20);
-  right: rem(20);
+  // right: rem(20);
+  right: rem(160);
   width: rem(109);
-  height: rem(50);
-  background-image: url(../../assets/images/common/common_fishes_left.png);
+  aspect-ratio: 109 / 50;
+  background-image: url("/assets/images/common/common_fishes_left.png");
   background-repeat: no-repeat;
   background-size: contain;
   @include mq("md") {
     top: rem(-40);
     width: rem(301);
-    height: rem(138);
+    aspect-ratio: 301 / 138;
     right: rem(81);
   }
 }

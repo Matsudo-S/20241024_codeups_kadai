@@ -15,9 +15,9 @@
   @include mq("md") {
     height: rem(90);
   }
-}
 
-.header:is(.is-active) {
-  opacity: 1;
-  visibility: visible;
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
 }

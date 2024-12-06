@@ -2,10 +2,11 @@
 
 .blog {
   @include mq("md") {
-    background-image: url(../../assets/images/top_blog_pc.jpg);
+    background-image: url("/assets/images/top_blog_pc.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
     background-size: 100% 50%;
+    aspect-ratio: 1440 / 500;
   }
 }

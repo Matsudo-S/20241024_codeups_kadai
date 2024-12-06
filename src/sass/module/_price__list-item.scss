@@ -3,6 +3,7 @@
 .price__list-item {
   display: flex;
   justify-content: space-between;
+  column-gap: rem(20);
   margin-top: rem(8);
   font-size: rem(14);
   line-height: 1.714;

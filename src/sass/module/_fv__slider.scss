@@ -1,7 +1,23 @@
 @use "global" as *;
 
 .fv__slider {
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 1s ease;
+  
+}
+
+.fv__slider .slider__item {
+  height: inherit;
+}
+
+.fv__slider .slick-slide {
+  height: 100vh;
+  margin: 0;
+}
+
+.fv__slider .slider__item img,
+.fv__slider .slider__item picture {
   height: inherit;
   object-fit: cover;
 }
-

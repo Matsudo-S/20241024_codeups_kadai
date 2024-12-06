@@ -33,19 +33,13 @@
   <link rel="preload" as="image" href="./assets/images/top_fv_pc_04.jpg">
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
-  <!-- slick -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+  
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script defer src="./assets/js/script.js"></script>
   <script defer src="./assets/js/jquery.inview.min.js"></script>
-
-
+  <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -248,32 +242,30 @@
             </div>
           </div>
 
-          <div class="fv__slider swiper js-fv__slider">
-            <div class="fv__swiper-wrapper swiper-wrapper">
-              <div class="fv__swiper-slide swiper-slide">
-                <picture>
-                  <source srcset="./assets/images/top_fv_sp_01.jpg" media="(max-width:767px)">
-                  <img src="./assets/images/top_fv_pc_01.jpg" alt="海の中を泳いでいる亀" loading="lazy">
-                </picture>
-              </div>
-              <div class="swiper-slide">
-                <picture>
-                  <source srcset="./assets/images/top_fv_sp_02.jpg" media="(max-width:767px)">
-                  <img src="./assets/images/top_fv_pc_02.jpg" alt="海の中で亀とダイバーが遭遇した様子" loading="lazy">
-                </picture>
-              </div>
-              <div class="swiper-slide">
-                <picture>
-                  <source srcset="./assets/images/top_fv_sp_03.jpg" media="(max-width:767px)">
-                  <img src="./assets/images/top_fv_pc_03.jpg" alt="晴天と海の景色" loading="lazy">
-                </picture>
-              </div>
-              <div class="swiper-slide">
-                <picture>
-                  <source srcset="./assets/images/top_fv_sp_04.jpg" media="(max-width:767px)">
-                  <img src="./assets/images/top_fv_pc_04.jpg" alt="砂浜と晴天と海の景色" loading="lazy">
-                </picture>
-              </div>
+          <div class="fv__slider js-fv__slider">
+            <div class="slider__item">
+              <picture>
+                <source srcset="./assets/images/top_fv_sp_01.jpg" media="(max-width:767px)">
+                <img src="./assets/images/top_fv_pc_01.jpg" alt="海の中を泳いでいる亀" loading="lazy">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <picture>
+                <source srcset="./assets/images/top_fv_sp_02.jpg" media="(max-width:767px)">
+                <img src="./assets/images/top_fv_pc_02.jpg" alt="海の中で亀とダイバーが遭遇した様子" loading="lazy">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <picture>
+                <source srcset="./assets/images/top_fv_sp_03.jpg" media="(max-width:767px)">
+                <img src="./assets/images/top_fv_pc_03.jpg" alt="晴天と海の景色" loading="lazy">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <picture>
+                <source srcset="./assets/images/top_fv_sp_04.jpg" media="(max-width:767px)">
+                <img src="./assets/images/top_fv_pc_04.jpg" alt="砂浜と晴天と海の景色" loading="lazy">
+              </picture>
             </div>
           </div>
         </div>
@@ -283,8 +275,8 @@
       <section id="campaign" class="campaign campaign-layout">
         <div class="campaign__inner inner">
           <div class="campaign__title section-title section-title--center">
-            <h3 class="section-title__main">campaign</h3>
-            <p class="section-title__sub">キャンペーン</p>
+            <p class="section-title__main">campaign</p>
+            <h3 class="section-title__sub">キャンペーン</h3>
           </div>
     
           <div class="campaign__contents campaign__contents-layout">
@@ -378,8 +370,8 @@
       <section id="about" class="about about-layout">
         <div class="about__inner inner">
           <div class="about__title section-title section-title--center">
-            <h3 class="section-title__main">about&nbsp;us</h3>
-            <p class="section-title__sub">私たちについて</p>
+            <p class="section-title__main">about&nbsp;us</p>
+            <h3 class="section-title__sub">私たちについて</h3>
           </div>
           <div class="about__contents">
 
@@ -417,8 +409,8 @@
       <section id="information" class="information information-layout">
         <div class="information__inner inner">
           <div class="information__title section-title section-title--center">
-            <h3 class="section-title__main">information</h3>
-            <p class="section-title__sub">ダイビング情報</p>
+            <p class="section-title__main">information</p>
+            <h3 class="section-title__sub">ダイビング情報</h3>
           </div>
 
           <div class="information__contents information__contents--layout">
@@ -451,8 +443,8 @@
       <section id="blog" class="blog blog-layout">
         <div class="blog__inner inner">
           <div class="blog__title section-title section-title--center">
-            <h3 class="section-title__main section-title__main--pc-white">blog</h3>
-            <p class="section-title__sub section-title__sub--pc-white">ブログ</p>
+            <p class="section-title__main section-title__main--pc-white">blog</p>
+            <h3 class="section-title__sub section-title__sub--pc-white">ブログ</h3>
           </div>
 
           <div class="blog__contents blog__contents--layout">
@@ -552,8 +544,8 @@
       <section id="voice" class="voice voice-layout">
         <div class="voice__inner inner">
           <div class="voice__title section-title section-title--center">
-            <h3 class="section-title__main">voice</h3>
-            <p class="section-title__sub">お客様の声</p>
+            <p class="section-title__main">voice</p>
+            <h3 class="section-title__sub">お客様の声</h3>
           </div>
 
           <div class="voice__contents voice__contents--layout">
@@ -618,8 +610,8 @@
       <section id="price" class="price price-layout">
         <div class="price__inner inner">
           <div class="price__title section-title section-title--center">
-            <h3 class="section-title__main">price</h3>
-            <p class="section-title__sub">料金一覧</p>
+            <p class="section-title__main">price</p>
+            <h3 class="section-title__sub">料金一覧</h3>
           </div>
 
           <div class="price__contents">
@@ -735,8 +727,8 @@
 
               <div class="contact__right">
                 <div class="contact__title section-title">
-                  <h3 class="contact__section-title-main">contact</h3>
-                  <p class="contact__section-title-sub">お問い合わせ</p>
+                  <p class="contact__section-title-main">contact</p>
+                  <h3 class="contact__section-title-sub">お問い合わせ</h3>
                 </div>
                 <p class="contact__text">ご予約・お問い合わせはコチラ</p>
                 <div class="contact__btn btn">

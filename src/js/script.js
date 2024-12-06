@@ -77,17 +77,6 @@ jQuery(function ($) {
 
     initHamburgerMenu();
   }
-  
-  // fv用swiper設定
-  const fv_swiper = new Swiper(".js-fv__slider", {
-    loop: true,
-    effect: "fade",
-    speed: 3000,
-    allowTouchMove: false,
-    autoplay: {
-      delay: 2000,
-    },
-  });
 });
 
 jQuery(function ($) {
@@ -141,17 +130,51 @@ jQuery(function ($) {
       const $title = $(".js-fv__content");
       const $animationContainer = $(".js-fv__loading-container");
       const $header = $(".js-top-header");
-
-      $title.css('opacity', '0');
-      hideAnimationAndStartSwiper($animationContainer, $header, $title);
+      const $loading = $(".fv__loading");
+      hideAnimationAndStartSwiper($animationContainer, $header, $title, $loading);
     });
   }
 
-  function hideAnimationAndStartSwiper($animationContainer, $header, $title) {
-    $animationContainer.delay(5000).fadeOut(3000, function() {
+  function hideAnimationAndStartSwiper($animationContainer, $header, $title, $loading) {
+    const $slider = $('.js-fv__slider');
+    $slider.css('opacity', '1');
+    
+    // 初期状態でfixedにしてスクロールを禁止
+    $loading.addClass('is-animation');
+    $('body').addClass('is-loading');
+    
+    // スライダーを初期化
+    $slider.slick({
+      arrows: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 3000,
+      infinite: true,
+      cssEase: 'ease-in-out',
+      fade: true,
+      initialSlide: 1
+    });
+
+    // ローディングアニメーションを実行
+    $animationContainer.delay(6000).fadeOut(3000, function() {
+      // アニメーション完了時にfixedを解除してスクロールを有効化
+      $loading.removeClass('is-animation');
+      $('body').removeClass('is-loading');
       $(this).remove();
-      swiper.init();
-      $header.add($title).fadeIn(1000);
+      
+      // ヘッダーとタイトルを表示（タイトルは永続化）
+      $header.addClass('is-active');
+      $title.css({
+        opacity: 1,
+        visibility: 'visible',
+      });
+
+      // スライダーをフェードインさせてから自動再生開始
+      $slider.animate({
+        opacity: 1
+      }, 2000, function() {
+        $slider.slick('slickPlay');
+      });
     });
   }
 
@@ -171,6 +194,7 @@ jQuery(function ($) {
           initScrollToTopButton();
         });
       });
+
     });
   }
 
@@ -227,7 +251,7 @@ jQuery(function ($) {
 
   // 関数の実行
   initColorBox();
-  initFvAnimation();
   initLoadingCompletion();
+  initFvAnimation();
   initSlick();
 });

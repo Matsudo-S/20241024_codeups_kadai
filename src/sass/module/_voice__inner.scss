@@ -7,7 +7,7 @@
 .voice__inner::before {
   @include mq("md") {
     content: "";
-    background-image: url(../../assets/images/common/common_fishes_right.png);
+    background-image: url("/assets/images/common/common_fishes_right.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: rem(301);
@@ -22,7 +22,7 @@
 .voice__inner::after {
   @include mq("md") {
     content: "";
-    background-image: url(../../assets/images/common/common_tatsu.png);
+    background-image: url("/assets/images/common/common_tatsu.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: rem(71);
