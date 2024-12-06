@@ -13,7 +13,7 @@
 .about-layout::before {
   @include mq(md){
     content: "";
-    background-image: url("/assets/images/common/common_sango.png");
+    background-image: url("../images/common/common_sango.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: rem(194);

@@ -21,7 +21,7 @@
 
 // スクロール禁止用のクラス（スクロール位置を固定）
 body.is-loading {
-  overflow: hidden;
+  // overflow: hidden;
   position: fixed;
   width: 100%;
   top: 0; // スクロール位置を一番上で固定

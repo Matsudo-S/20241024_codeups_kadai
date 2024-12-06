@@ -12,22 +12,22 @@
 }
 
 .fv__loading-image--left {
-  background-image: url("./assets/images/top_fv_sp_01.jpg");
+  background-image: url("../images/top_fv_sp_01.jpg");
   animation: slideUpLeft 2s 3.2s forwards;
   background-position: left center;
   background-size: 200% 100%;
   @include mq(md){
-    background-image: url("./assets/images/top_fv_pc_01.jpg");
+    background-image: url("../images/top_fv_pc_01.jpg");
   }
 }
 
 .fv__loading-image--right {
-  background-image: url("./assets/images/top_fv_sp_01.jpg");
+  background-image: url("../images/top_fv_sp_01.jpg");
   animation: slideUpRight 2s 3.4s forwards;
   background-position: right center;
   background-size: 200% 100%;
   @include mq(md){
-    background-image: url("./assets/images/top_fv_pc_01.jpg");
+    background-image: url("../images/top_fv_pc_01.jpg");
   }
 }
 

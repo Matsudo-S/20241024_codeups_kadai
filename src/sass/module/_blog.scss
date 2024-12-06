@@ -2,7 +2,7 @@
 
 .blog {
   @include mq("md") {
-    background-image: url("/assets/images/top_blog_pc.jpg");
+    background-image: url("../images/top_blog_pc.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;

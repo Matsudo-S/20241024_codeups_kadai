@@ -18,7 +18,7 @@
   right: rem(160);
   width: rem(109);
   aspect-ratio: 109 / 50;
-  background-image: url("/assets/images/common/common_fishes_left.png");
+  background-image: url("../images/common/common_fishes_left.png");
   background-repeat: no-repeat;
   background-size: contain;
   @include mq("md") {

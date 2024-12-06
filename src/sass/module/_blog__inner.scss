@@ -7,7 +7,7 @@
 .blog__inner::before {
   @include mq("md") {
     content: "";
-    background-image: url("/assets/images/common/common_fishes_white.png");
+    background-image: url("../images/common/common_fishes_white.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: rem(437);
