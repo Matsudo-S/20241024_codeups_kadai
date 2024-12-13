@@ -7,11 +7,13 @@
 
 .btn::after {
   content: "";
-  display: block;
-  width: rem(202);
-  height: rem(54);
+	position: absolute;
+	width: rem(202);
+	height: rem(54);
+  right: 0;
+  bottom: 0;
   border: 1px solid $main-accent-color;
   position: absolute;
-  left: rem(3);
-  top: rem(4);
+  left: rem(6);
+	top: rem(4);
 }

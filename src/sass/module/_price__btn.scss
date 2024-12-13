@@ -2,8 +2,9 @@
 
 .price__btn {
   margin-top: rem(40);
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
+  text-align: center;
   @include mq("md") {
     margin-top: rem(80);
   }

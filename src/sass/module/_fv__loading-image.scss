@@ -13,7 +13,7 @@
 
 .fv__loading-image--left {
   background-image: url("../images/top_fv_sp_01.jpg");
-  animation: slideUpLeft 2s 3.2s forwards;
+  animation: slideUpLeft 1.8s 2.2s forwards;
   background-position: left center;
   background-size: 200% 100%;
   @include mq(md){
@@ -23,7 +23,7 @@
 
 .fv__loading-image--right {
   background-image: url("../images/top_fv_sp_01.jpg");
-  animation: slideUpRight 2s 3.4s forwards;
+  animation: slideUpRight 1.8s 2.4s forwards;
   background-position: right center;
   background-size: 200% 100%;
   @include mq(md){

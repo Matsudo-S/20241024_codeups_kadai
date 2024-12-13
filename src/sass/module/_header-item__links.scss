@@ -1,11 +1,7 @@
 @use "global" as *;
 
 .header-item__links {
-  text-align: center;
-  display: flex;
-  align-items: center;
   height: inherit;
-  padding: 0 rem(20);
 }
 
 .header-item__links a {
@@ -14,4 +10,5 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 rem(20);
 }

@@ -1,12 +1,9 @@
 @use "global" as *;
 
-.footer__inner {
-  width: 100%;
+.footer-layout {
   background-color: $main-accent-color;
-  padding: rem(49) rem(15) rem(56);
-  // max-width: rem(500);
+  padding: rem(49) rem(0) rem(56);
   @include mq("md") {
-    padding: rem(73) rem(40);
-    max-width: rem(1440);
+    padding: rem(73) rem(0) rem(40);
   }
 }

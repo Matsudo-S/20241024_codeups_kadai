@@ -15,6 +15,7 @@
     aspect-ratio: 437 / 201;
     position: absolute;
     bottom: rem(-36);
-    left: rem(-55);
+    // left: rem(-55);
+    left: calc(50% - min(43vw, 38.5rem));
   }
 }

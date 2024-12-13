@@ -2,8 +2,9 @@
 
 .information__btn {
   margin-top: rem(38.6);
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
+  text-align: center;
   @include mq("md") {
     margin-top: rem(37);
     margin-right: rem(9);

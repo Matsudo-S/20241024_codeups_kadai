@@ -45,11 +45,13 @@ jQuery(function ($) {
   function openDrawer() {
     $(".js-drawer").fadeIn();
     $(".js-hamburger").addClass("is-active");
+    $("body").addClass("is-drawer-active");
   }
 
   function closeDrawer() {
     $(".js-drawer").fadeOut();
     $(".js-hamburger").removeClass("is-active");
+    $("body").removeClass("is-drawer-active");
   }
 
 
@@ -156,7 +158,7 @@ jQuery(function ($) {
     });
 
     // ローディングアニメーションを実行
-    $animationContainer.delay(6000).fadeOut(3000, function() {
+    $animationContainer.delay(4000).fadeOut(2000, function() {
       // アニメーション完了時にfixedを解除してスクロールを有効化
       $loading.removeClass('is-animation');
       $('body').removeClass('is-loading');
@@ -172,7 +174,7 @@ jQuery(function ($) {
       // スライダーをフェードインさせてから自動再生開始
       $slider.animate({
         opacity: 1
-      }, 2000, function() {
+      }, 1000, function() {
         $slider.slick('slickPlay');
       });
     });
@@ -222,6 +224,7 @@ jQuery(function ($) {
 
   function initSlick() {
     $('.slider').slick({
+      // adaptiveHeight: true,
       arrows: true,
       autoplay: true,
       autoplaySpeed: 3000,

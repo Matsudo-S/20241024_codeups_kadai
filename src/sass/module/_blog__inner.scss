@@ -13,7 +13,8 @@
     width: rem(437);
     aspect-ratio: 437 / 201;
     position: absolute;
-    left: rem(-55);
+    // left: rem(-55);
+    left: calc(50% - min(44vw, 38.5rem));
     top: rem(-74);
 
   }

@@ -2,8 +2,9 @@
 
 .blog__btn--layout {
   margin-top: rem(47);
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
+  text-align: center;
   @include mq("md") {
     margin-top: rem(80);
   }

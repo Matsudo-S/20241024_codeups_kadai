@@ -1,5 +1,10 @@
 @use "global" as *;
 
+// 本体のスクロール制御用のクラス
+body.is-drawer-active {
+  overflow: hidden;
+}
+
 .drawer-menu {
   background-color: $main-accent-color;
   display: none;

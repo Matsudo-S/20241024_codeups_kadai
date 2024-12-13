@@ -19,10 +19,9 @@
   position: fixed;
 }
 
-// スクロール禁止用のクラス（スクロール位置を固定）
+スクロール禁止のスタイルを削除
 body.is-loading {
-  // overflow: hidden;
   position: fixed;
   width: 100%;
-  top: 0; // スクロール位置を一番上で固定
+  top: 0;
 }

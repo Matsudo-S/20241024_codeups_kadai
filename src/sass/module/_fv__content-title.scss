@@ -5,13 +5,17 @@
   font-family: $font-family-lato;
   font-size: rem(40);
   font-weight: $regular;
-  letter-spacing: 1.34rem;
+  letter-spacing: .53em;
+  text-indent: .53em;
   line-height: 1.6;
   text-transform: uppercase;
   @include mq("md") {
   font-size: rem(80);
   line-height: 0.8;  
-  letter-spacing: 2.62rem;
+  // letter-spacing: 2.62rem;
+  letter-spacing: .53em;
+  text-indent: .53em;
   }
 }
+
 
