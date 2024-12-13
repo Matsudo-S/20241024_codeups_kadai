@@ -161,16 +161,7 @@ jQuery(function ($) {
     $animationContainer.delay(4000).fadeOut(2000, function() {
       // アニメーション完了時にfixedを解除してスクロールを有効化
       $loading.removeClass('is-animation');
-      $('body').removeClass('is-loading');
-      $(this).remove();
       
-      // ヘッダーとタイトルを表示（タイトルは永続化）
-      $header.addClass('is-active');
-      $title.css({
-        opacity: 1,
-        visibility: 'visible',
-      });
-
       // スライダーをフェードインさせてから自動再生開始
       $slider.animate({
         opacity: 1
