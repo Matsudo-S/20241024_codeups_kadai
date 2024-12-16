@@ -1,97 +1,94 @@
+// hamburger drawer
 jQuery(function ($) {
-
-  // hamburger menu
-  $(function () {
-    $(".js-hamburger,.js-drawer").on("click", function () {
-      toggleDrawer();
-    });
-
-    // ページ内リンクをクリックしたら閉じる
-    // ドロワーメニュー内のリンクがクリックされたときの処理
-    $(".js-drawer a[href]").on("click", function(e) {
-      e.preventDefault(); // デフォルトのリンク動作を防止
-
-      const targetId = $(this).attr('href'); // クリックされたリンクのhref属性を取得
-      const isInPageLink = targetId.charAt(0) === '#'; // ページ内リンクかどうかを判定
-      
-      if (isInPageLink) {
-        // ページ内リンクの場合、スムーズスクロールを実行
-        $('html, body').animate({
-          scrollTop: $(targetId).offset().top
-        }, 800);
-      } else {
-        // 外部リンクの場合、そのページに遷移
-        window.location.href = targetId;
-      }    
-      closeDrawer(); 
-    });
-
-    // resize event
-    $(window).on('resize', function() {
-      if (window.matchMedia("(min-width: 768px)").matches) {
-        closeDrawer();
-      }
-    });
-  });
-
-  function toggleDrawer() {
-    if ($(".js-drawer").is(":visible")) {
-      closeDrawer();
-    } else {
-      openDrawer();
-    }
-  }
-
-  function openDrawer() {
-    $(".js-drawer").fadeIn();
-    $(".js-hamburger").addClass("is-active");
-    $("body").addClass("is-drawer-active");
-  }
-
-  function closeDrawer() {
-    $(".js-drawer").fadeOut();
-    $(".js-hamburger").removeClass("is-active");
-    $("body").removeClass("is-drawer-active");
-  }
-
-
-  // fvより下にスクロールした時に、トップへ戻るボタンを表示する
-  window.addEventListener('scroll', function() {
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var header = document.querySelector(".js-header");
-    var scrollButton = document.querySelector('.scroll-to-top-btn');
-    var sliderHeight = document.querySelector(".fv, .sub-page-mv")?.offsetHeight || 0;
-    
-    if (sliderHeight - 30 < scrollTop) {
-      header.classList.add("headerScrolled");
-      scrollButton.classList.add('show');
-    } else {
-      header.classList.remove("headerScrolled");
-      scrollButton.classList.remove('show');
-    }
-  });
+    // hamburger menu
+    $(function () {
+      $(".js-hamburger,.js-drawer").on("click", function () {
+        toggleDrawer();
+      });
   
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+      // ページ内リンクをクリックしたら閉じる
+      // ドロワーメニュー内のリンクがクリックされたときの処理
+      $(".js-drawer a[href]").on("click", function(e) {
+        e.preventDefault(); // デフォルトのリンク動作を防止
+  
+        const targetId = $(this).attr('href'); // クリックされたリンクのhref属性を取得
+        const isInPageLink = targetId.charAt(0) === '#'; // ページ内リンクかどうかを判定
+        
+        if (isInPageLink) {
+          // ページ内リンクの場合、スムーズスクロールを実行
+          $('html, body').animate({
+            scrollTop: $(targetId).offset().top
+          }, 800);
+        } else {
+          // 外部リンクの場合、そのページに遷移
+          window.location.href = targetId;
+        }    
+        closeDrawer(); 
+      });
+  
+      // resize event
+      $(window).on('resize', function() {
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          closeDrawer();
+        }
+      });
     });
-
-    initHamburgerMenu();
-  }
+  
+    function toggleDrawer() {
+      if ($(".js-drawer").is(":visible")) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    }
+  
+    function openDrawer() {
+      $(".js-drawer").fadeIn();
+      $(".js-hamburger").addClass("is-active");
+      $("body").addClass("is-drawer-active");
+    }
+  
+    function closeDrawer() {
+      $(".js-drawer").fadeOut();
+      $(".js-hamburger").removeClass("is-active");
+      $("body").removeClass("is-drawer-active");
+    }  
 });
 
+// scroll to top button
 jQuery(function ($) {
-  // color box
+  function initScrollToTopButton() {
+    const scrollButton = $('.scroll-to-top-btn');
+    
+    $(window).on('scroll', function() {
+      const scrollTop = $(window).scrollTop();
+      const fvHeight = $('.fv').outerHeight();
+
+      if (scrollTop > fvHeight) {
+        scrollButton.addClass('show');
+      } else {
+        scrollButton.removeClass('show');
+      }
+    });
+
+    scrollButton.on('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  initScrollToTopButton();
+});
+
+// color box
+jQuery(function ($) {
   // ----------------------------------------------
   function initColorBox() {
     const speed = 500;
     const $box = $(".js-colorbox");
     
-    if ($box.length === 0) {
-      console.warn('.js-colorbox要素が見つかりません');
-      return;
-    }
 
     $box.each(function() {
       const $currentBox = $(this);
@@ -126,96 +123,15 @@ jQuery(function ($) {
     });
   }
 
-  /* fv ローディングアニメーションとswiper */
-  function initFvAnimation() {
-    $(window).on('load', function() {
-      const $title = $(".js-fv__content");
-      const $animationContainer = $(".js-fv__loading-container");
-      const $header = $(".js-top-header");
-      const $loading = $(".fv__loading");
-      hideAnimationAndStartSwiper($animationContainer, $header, $title, $loading);
-    });
-  }
+  initColorBox();
+});
 
-  function hideAnimationAndStartSwiper($animationContainer, $header, $title, $loading) {
-    const $slider = $('.js-fv__slider');
-    $slider.css('opacity', '1');
-    
-    // 初期状態でfixedにしてスクロールを禁止
-    $loading.addClass('is-animation');
-    $('body').addClass('is-loading');
-    
-    // スライダーを初期化
-    $slider.slick({
-      arrows: false,
-      autoplay: false,
-      autoplaySpeed: 4000,
-      speed: 3000,
-      infinite: true,
-      cssEase: 'ease-in-out',
-      fade: true,
-      initialSlide: 1
-    });
 
-    // ローディングアニメーションを実行
-    $animationContainer.delay(4000).fadeOut(2000, function() {
-      // アニメーション完了時にfixedを解除してスクロールを有効化
-      $loading.removeClass('is-animation');
-      
-      // スライダーをフェードインさせてから自動再生開始
-      $slider.animate({
-        opacity: 1
-      }, 1000, function() {
-        $slider.slick('slickPlay');
-      });
-    });
-  }
-
-  function initLoadingCompletion() {
-    $(document).ready(function() {
-      const header = $('.header');
-      const fvLoading = $('.fv__loading');
-      const fvTitle = $('.js-fv__content');
-
-      fvLoading.on('animationend', function() {
-        setTimeout(() => {
-          header.add(fvTitle).css({
-            transition: 'opacity 2s ease-in-out',
-            opacity: '1'
-          });
-          header.addClass('is-active');
-          initScrollToTopButton();
-        });
-      });
-
-    });
-  }
-
-  function initScrollToTopButton() {
-    const scrollButton = $('.scroll-to-top-btn');
-    
-    $(window).on('scroll', function() {
-      const scrollTop = $(window).scrollTop();
-      const fvHeight = $('.fv').outerHeight();
-
-      if (scrollTop > fvHeight) {
-        scrollButton.addClass('show');
-      } else {
-        scrollButton.removeClass('show');
-      }
-    });
-
-    scrollButton.on('click', function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  }
-
+// campaign scroll
+jQuery(function ($) {
+  const $card__slider = $('.slider');
   function initSlick() {
-    $('.slider').slick({
-      // adaptiveHeight: true,
+    $($card__slider).slick({
       arrows: true,
       autoplay: true,
       autoplaySpeed: 3000,
@@ -243,9 +159,146 @@ jQuery(function ($) {
     });
   }
 
-  // 関数の実行
-  initColorBox();
-  initLoadingCompletion();
-  initFvAnimation();
   initSlick();
+});
+
+
+// loading animation
+jQuery(function ($) {
+
+  function confirm_session_storage() {
+    const isFirstLoad = sessionStorage.getItem('isFirstLoad');
+    const $loadingContainer = $('.js-fv__loading-container');
+    const $header = $('.header');
+    const $fvTitle = $('.js-fv__content');
+
+    window.addEventListener('load', function() {
+      if (!isFirstLoad) {
+        // 初回アクセス時
+        initLoadingCompletion();
+        initFvAnimation();
+        sessionStorage.setItem('isFirstLoad', true);
+      } else {
+        // 2回目以降
+        $loadingContainer.hide();
+        
+        // ヘッダーとタイトルを同じアニメーションで表示
+        $fvTitle.css({
+          // 'transition': 'opacity 0s ease-in-out',
+          'opacity': '1',
+          'visibility': 'visible'
+        });
+
+        $header.css({
+          'transition': 'opacity 0s ease-in-out',
+          'opacity': '1',
+          'visibility': 'visible'
+        });
+
+
+        init_fv_slider();
+      }
+    });
+  }
+
+  // fv スライダー
+  function init_fv_slider() {
+    const $slider = $('.js-fv__slider');
+    $slider.slick({
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 3000,
+      infinite: true,
+      cssEase: 'ease-in-out',
+      fade: true,
+      initialSlide: 0
+    });
+    $slider.css('opacity', '1');
+  }
+
+  /* fv ローディングアニメーションとswiper */
+  function initFvAnimation() {
+    const $title = $(".js-fv__content");
+    const $animationContainer = $(".js-fv__loading-container");
+    const $header = $(".js-top-header");
+    const $loading = $(".fv__loading");
+    const $leftImage = $('.fv__loading-image--left');
+    const $rightImage = $('.fv__loading-image--right');
+
+    // アニメーションのキーフレームを追加
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = `
+      @keyframes slideUpLeft {
+        to {
+          transform: translateY(0);
+        }
+      }
+      @keyframes slideUpRight {
+        to {
+          transform: translateY(0);
+        }
+      }
+    `;
+    document.head.appendChild(styleSheet);
+
+    // アニメーションを適用
+    $leftImage.css('animation', 'slideUpLeft 1.8s 2.2s forwards');
+    $rightImage.css('animation', 'slideUpRight 1.8s 2.4s forwards');
+
+    // アニメーション完了を待ってから次の処理を実行
+    $rightImage.on('animationend', function() {
+      hideAnimationAndStartSwiper($animationContainer, $header, $title, $loading);
+    });
+  }
+
+  function hideAnimationAndStartSwiper($animationContainer, $header, $title, $loading) {
+    const $slider = $('.js-fv__slider');
+    $slider.css('opacity', '1');
+    
+    // 初期状態でfixedにしてスクロールを禁止
+    $loading.addClass('is-animation');
+    $('body').addClass('is-loading');
+
+    init_fv_slider();
+
+    // ローディングアニメーションを実行
+    $animationContainer.delay(4000).fadeOut(2000, function() {
+      // アニメーション完了時にfixedを解除してスクロールを有効化
+      $loading.removeClass('is-animation');
+      
+
+
+      // スライダーをフェードインさせてから自動再生開始
+      $slider.animate({
+        opacity: 1
+      }, 1000, function() {
+        $slider.slick('slickPlay');
+      });
+    });
+  }
+
+  function initLoadingCompletion() {
+    $(document).ready(function() {
+      const header = $('.header');
+      const fvLoading = $('.fv__loading');
+      const fvTitle = $('.js-fv__content');
+
+      fvLoading.on('animationend', function() {
+        setTimeout(() => {
+          header.add(fvTitle).css({
+            transition: 'opacity 2s ease-in-out',
+            opacity: '1'
+          });
+          header.addClass('is-active');
+        });
+      });
+
+    });
+  }
+
+
+  
+  // 関数の実行
+  confirm_session_storage(); 
 });

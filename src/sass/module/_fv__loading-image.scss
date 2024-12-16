@@ -7,13 +7,11 @@
   aspect-ratio: 187.5 / 667;
   @include mq("md") {
     aspect-ratio: 720 / 768;
-    
   }
 }
 
 .fv__loading-image--left {
   background-image: url("../images/top_fv_sp_01.jpg");
-  animation: slideUpLeft 1.8s 2.2s forwards;
   background-position: left center;
   background-size: 200% 100%;
   @include mq(md){
@@ -23,22 +21,9 @@
 
 .fv__loading-image--right {
   background-image: url("../images/top_fv_sp_01.jpg");
-  animation: slideUpRight 1.8s 2.4s forwards;
   background-position: right center;
   background-size: 200% 100%;
   @include mq(md){
     background-image: url("../images/top_fv_pc_01.jpg");
-  }
-}
-
-@keyframes slideUpLeft {
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUpRight {
-  to {
-    transform: translateY(0);
   }
 }
