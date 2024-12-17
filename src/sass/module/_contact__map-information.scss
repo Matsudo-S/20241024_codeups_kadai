@@ -1,8 +1,0 @@
-@use "global" as *;
-
-.contact__map-information {
-  @include mq("md") {
-    min-width: rem(169);
-    margin-top: rem(-2);
-  }
-}

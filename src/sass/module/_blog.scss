@@ -10,3 +10,132 @@
     aspect-ratio: 1440 / 500;
   }
 }
+
+.blog-layout {
+  padding-top: rem(80);
+  @include mq("md") {
+    padding-top: rem(100);
+  }
+}
+
+.blog__inner {
+  position: relative;
+}
+
+.blog__inner::before {
+  @include mq("md") {
+    content: "";
+    background-image: url("../images/common/common_fishes_white.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(437);
+    aspect-ratio: 437 / 201;
+    position: absolute;
+    // left: rem(-55);
+    left: calc(50% - min(44vw, 38.5rem));
+    top: rem(-74);
+
+  }
+}
+
+.blog__contents--layout {
+  margin-top: rem(24);
+  
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.blog__cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: rem(44.8);
+  margin: auto;
+  
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(40);
+    row-gap: rem(40);  
+  }
+}
+
+.blog__card {
+  background-color: $white_pure;
+  padding: rem(16) rem(17) rem(24);
+  box-shadow: 4px 4px 10px 0px $off_white;
+}
+
+.blog__card.card  {
+  @include mq("md") {
+    // min-height: rem(447); 
+    padding: rem(18);
+  }
+  
+}
+
+.blog__card-header {
+  display: block;
+}
+.blog__card-top {
+  margin-top: rem(14.4);
+  margin-left: rem(6.2);
+  @include mq("md") {
+    margin-top: rem(27.5);
+    // margin-left: rem(-5.3);
+  }
+  
+}
+
+.blog__card-title {
+  font-size: rem(16);
+  line-height: 1.5;
+  font-weight: $medium;
+  padding-bottom: rem(4);
+  @include mq("md") {
+    padding-bottom: rem(2);
+  }
+}
+
+.blog__card-img img {
+  aspect-ratio: 301 / 201;
+}
+
+.blog__card-date {
+  font-size: rem(12);
+  line-height: 1.5;
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: $main-font-color;
+}
+
+.card__body.blog__card-body {
+  width: 95%;
+  margin-top: rem(17);
+  margin-left: rem(9);
+  @include mq("md") {
+    width: 100%;
+    margin-left: 0;
+    margin-top: rem(40);
+  }
+}
+
+.blog__btn--layout {
+  margin-top: rem(47);
+  // display: flex;
+  // justify-content: center;
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.blog__btn--layout .btn {
+  display: inline-block;
+}
+
+.btn__layout--center.blog__btn--layout  {
+  margin-top: rem(33.8);
+  @include mq("md") {
+    margin-top: rem(0);
+  }
+}

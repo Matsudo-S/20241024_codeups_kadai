@@ -1,8 +1,0 @@
-@use "global" as *;
-
-.information__contents--layout {
-  margin-top: rem(34);
-  @include mq("md") {
-    margin-top: rem(40);
-  }
-}

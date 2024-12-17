@@ -1,9 +1,0 @@
-@use "global" as *;
-
-.footer__menu-lists-layout { // 32 + sns-iconのpadding 8pxで計40px
-  margin-left: rem(22);
-  margin-top: rem(-10);
-  @include mq("md") {
-    margin-top: rem(-16);
-  }
-}

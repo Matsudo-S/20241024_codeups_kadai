@@ -1,7 +1,0 @@
-@use "global" as *;
-
-.about__inner {
-  @include mq("md") {
-    position: relative;
-  }
-}

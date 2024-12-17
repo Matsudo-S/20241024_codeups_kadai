@@ -1,8 +1,0 @@
-@use "global" as *;
-
-.card__body {
-  margin-top: rem(15);
-  @include mq("md") {
-    margin-top: rem(30);
-  }
-}

@@ -1,0 +1,96 @@
+@use "global" as *;
+
+.voice-layout {
+  margin: rem(80) 0;
+  @include mq("md") {
+    margin: rem(140) 0;
+  }
+}
+
+.voice__inner {
+  position: relative;
+}
+
+.voice__inner::before {
+  @include mq("md") {
+    content: "";
+    background-image: url("../images/common/common_fishes_right.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(301);
+    aspect-ratio: 301 / 138;
+    position: absolute;
+    left: calc(50% - min(43vw, 38.5rem));
+    top: rem(-122);
+
+  }
+}
+
+.voice__inner::after {
+  @include mq("md") {
+    content: "";
+    background-image: url("../images/common/common_tatsu.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(71);
+    aspect-ratio: 71 / 162;
+    position: absolute;
+    bottom: rem(-64);
+    right: rem(24);
+  }
+}
+
+.voice__contents--layout {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(30);
+  }
+}
+
+.colorbox.voice__colorbox {
+  margin-top: rem(14.4);
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.cards.voice_cards {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: rem(40);
+  @include mq("md") {
+    row-gap: 0;
+    grid-template-rows: none;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(40);
+  }
+}
+
+.card__text.voice__card-text {
+  font-weight: $regular;
+  line-height: 1.5;
+  color: $main-font-color;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+  line-clamp: 10;
+  overflow: hidden;
+  @include mq("md") {
+    -webkit-line-clamp: 7;
+  line-clamp: 7;
+  }
+}
+
+.voice__btn--layout {
+  margin-top: rem(47);
+  // display: flex;
+  // justify-content: center;
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.voice__btn--layout .btn {
+  display: inline-block;
+}

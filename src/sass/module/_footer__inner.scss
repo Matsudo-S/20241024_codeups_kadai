@@ -1,9 +1,0 @@
-@use "global" as *;
-
-.footer-layout {
-  background-color: $main-accent-color;
-  padding: rem(49) rem(0) rem(56);
-  @include mq("md") {
-    padding: rem(73) rem(0) rem(40);
-  }
-}

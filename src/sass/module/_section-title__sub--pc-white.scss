@@ -1,7 +1,0 @@
-@use "global" as *;
-
-.section-title__sub.section-title__sub--pc-white {
-  @include mq("md") {
-    color: $white_pure;
-  }
-}

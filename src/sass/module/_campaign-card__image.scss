@@ -1,9 +1,0 @@
-@use "global" as *;
-
-.campaign-card__image img {
-  aspect-ratio: 280 / 188;
-  object-fit: cover;
-  @include mq(md){
-    aspect-ratio: 333 / 223;
-  }
-}

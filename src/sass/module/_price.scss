@@ -1,0 +1,145 @@
+@use "global" as *;
+
+.price-layout {
+  background: $blue-white;
+  padding-top: rem(80);
+  // padding-bottom: rem(80);
+  @include mq("md") {
+    padding-top: rem(97);
+    // padding-bottom: rem(97);
+  }
+}
+
+.price__inner {
+  position: relative;
+  background-color: $blue-white;
+}
+
+.price__inner::before {
+  @include mq("md") {
+    content: "";
+    background-image: url("../images/common/common_fishes_left.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(437);
+    aspect-ratio: 437 / 201;
+    position: absolute;
+    bottom: rem(-36);
+    // left: rem(-55);
+    left: calc(50% - min(43vw, 38.5rem));
+  }
+}
+
+.price__contents {
+  margin-top: rem(39);
+  display: flex;
+  flex-direction: column-reverse;
+  @include mq("md") {
+    flex-direction: row;
+    margin-top: rem(40);
+    column-gap: rem(93);
+  }
+}
+
+.price__lists {
+  margin-top: rem(40);
+  width: 102%;
+  @include mq("md") {
+    margin-top: rem(0);
+    width: 45.6%;
+  }
+}
+
+.price__list:not(:first-child) {
+  margin-top: rem(40);
+}
+
+.price__list-title {
+  padding-bottom: rem(4);
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1.5;
+  color: $main-font-color;
+}
+
+.price__list-item {
+  display: flex;
+  justify-content: space-between;
+  column-gap: rem(20);
+  margin-top: rem(8);
+  font-size: rem(14);
+  line-height: 1.714;
+  color: $main-font-color;
+  font-weight: $regular;
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: 1.5;
+  }
+}
+
+.price__images {
+  width: 100%;
+  @include mq("md") {
+    width: 45.5%;
+  }
+}
+
+.price__images img,
+.price__images picture {
+  aspect-ratio: 345 / 227;
+  @include mq("md") {
+    aspect-ratio: 492 / 746;
+    
+  }
+}
+
+.colorbox.price_colorbox {
+  position: relative;
+  width: 100%;
+  margin: rem(-9) auto rem(-2.8);
+}
+
+.colorbox.price_colorbox img {
+  display: block;
+  width: 100%;
+}
+
+.price__btn {
+  margin-top: rem(40);
+  // display: flex;
+  // justify-content: center;
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.price__btn .btn {
+  display: inline-block;
+}
+
+.price__btn--layout {
+  margin-top: rem(38);
+  display: flex;
+  justify-content: center;
+  @include mq("md") {
+    margin-top: rem(92);
+  }
+}
+
+.price__btn--layout .btn {
+  display: inline-block;
+}
+
+.price-btn__layout--center {
+  margin-top: rem(40);
+  display: flex;
+  justify-content: center;
+  @include mq("md") {
+    margin-top: rem(94);
+  }
+}
+
+.price-btn__layout--center .btn {
+  display: inline-block;
+}

@@ -1,9 +1,0 @@
-@use "global" as *;
-
-.drawer-menu__lists {
-  margin-top: rem(5);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: rem(30);
-  // padding-bottom: rem(76);
-}

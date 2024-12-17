@@ -1,8 +1,0 @@
-@use "global" as *;
-
-.footer__left {
-  display: block;
-  @include mq("md") {
-    display: flex;
-  }
-}

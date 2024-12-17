@@ -196,13 +196,13 @@ jQuery(function ($) {
         });
 
 
-        init_fv_slider();
+        init_fv_slider(0);
       }
     });
   }
 
   // fv スライダー
-  function init_fv_slider() {
+  function init_fv_slider($initialSlide) {
     const $slider = $('.js-fv__slider');
     $slider.slick({
       arrows: false,
@@ -212,7 +212,7 @@ jQuery(function ($) {
       infinite: true,
       cssEase: 'ease-in-out',
       fade: true,
-      initialSlide: 0
+      initialSlide: $initialSlide
     });
     $slider.css('opacity', '1');
   }
@@ -260,7 +260,7 @@ jQuery(function ($) {
     $loading.addClass('is-animation');
     $('body').addClass('is-loading');
 
-    init_fv_slider();
+    init_fv_slider(1);
 
     // ローディングアニメーションを実行
     $animationContainer.delay(4000).fadeOut(2000, function() {
@@ -290,6 +290,11 @@ jQuery(function ($) {
             transition: 'opacity 2s ease-in-out',
             opacity: '1'
           });
+          // header.css({
+          //   'transition': 'opacity 2s ease-in-out',
+          //   'opacity': '1',
+          //   'visibility': 'visible'
+          // });
           header.addClass('is-active');
         });
       });

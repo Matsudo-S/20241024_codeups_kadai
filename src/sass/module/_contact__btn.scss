@@ -1,9 +1,0 @@
-@use "global" as *;
-
-.contact__btn {
-  margin-top: rem(38);
-  margin-left: rem(-4);
-  @include mq("md") {
-    margin-left: rem(-6);
-  }
-}
