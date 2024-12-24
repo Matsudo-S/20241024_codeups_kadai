@@ -184,11 +184,12 @@ function confirm_session_storage() {
       // 2回目以降
       $loadingContainer.hide();
       
-      $header.css({
-        'transition': 'opacity 0s ease-in-out',
-        'opacity': '1',
-        'visibility': 'visible'
-      });
+      $header.addClass('is-active');
+      // $header.css({
+      //   'transition': 'opacity 0s ease-in-out',
+      //   'opacity': '1',
+      //   'visibility': 'visible'
+      // });
 
       init_fv_slider(0);
     }
