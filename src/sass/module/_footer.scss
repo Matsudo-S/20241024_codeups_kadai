@@ -28,7 +28,6 @@
 }
 
 .footer__logo {
-  cursor: pointer;
   height: inherit;
   width: rem(120);
   @include mq("md") {

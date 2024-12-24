@@ -1,18 +1,24 @@
 @use "global" as *;
 
-.price-layout {
-  background: $blue-white;
+.price {
   padding-top: rem(80);
-  // padding-bottom: rem(80);
+  padding-bottom: rem(80);
   @include mq("md") {
     padding-top: rem(97);
-    // padding-bottom: rem(97);
+    padding-bottom: rem(97);
+  }
+}
+
+.price-layout {
+  background-color: $blue-white;
+  margin-top: rem(80);
+  @include mq("md") {
+    margin-top: rem(140);
   }
 }
 
 .price__inner {
   position: relative;
-  background-color: $blue-white;
 }
 
 .price__inner::before {

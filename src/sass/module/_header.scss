@@ -1,17 +1,11 @@
 @use "global" as *;
 
 .header {
-  background: rgba($main-font-color, $alpha: 0.68);
   height: rem(80);
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+  background: rgba($main-font-color, $alpha: 0.68);
   opacity: 0;
   visibility: hidden;
   transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
-
   @include mq("md") {
     height: rem(90);
   }
@@ -22,54 +16,93 @@
   visibility: visible;
 }
 
+.header-layout {
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+
 .header__inner {
-  align-items: center;
+  height: inherit;
   display: flex;
-  height: inherit;
+  // align-items: center;
   justify-content: space-between;
+  padding: 0 rem(15);
+  @include mq("md") {
+    padding: 0 rem(40);
+  }
 }
 
-.header__nav-main {
+// .header__nav-main {
+//   height: inherit;
+// }
+.header__nav-item {
   height: inherit;
-}
-
-.header__nav-main-item {
   white-space: nowrap;
   min-width: max-content;
 }
+
+// .header__nav-main-item {
+//   white-space: nowrap;
+//   min-width: max-content;
+// }
 
 .header__logo {
   cursor: pointer;
   display: flex;
   height: inherit;
-  width: rem(133);
-  padding: rem(21) rem(15);
+  max-width: rem(133);
+  z-index: 9999;
   @include mq("md") {
-    width: rem(213);
-    padding: rem(20) rem(40);
+    max-width: rem(213);
+    
   }
 }
 
-.header__logo:hover {
+.header__logo a {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo a:hover {
   opacity: 0.7;
 }
 
-.header__name {
-  height: inherit;
-}
-
-.header-items {
-  display: flex;
-  height: inherit;
-  // gap: rem(40);
+.header__logo img {
+  width: 100%;
+  object-fit: contain;
+  aspect-ratio: 102/38;
   @include mq("md") {
-    padding-right: rem(20);
+    aspect-ratio: 133/50;
   }
 }
 
-.header-item {
+.header__nav {
+  display: none;
   height: inherit;
+  @include mq("md") {
+    display: block;
+  }
 }
+
+.header__nav-list {
+  display: flex;
+  height: inherit;
+  gap: rem(40);
+}
+
+.header__nav-item a {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .header-item__main {
   color: $white_pure;
@@ -91,27 +124,14 @@
   font-family: $base-font-family;
   font-size: rem(10);
   line-height: 1.5;
-  margin-top: rem(4);
+  padding-top: rem(4);
 }
 
-.header-item__links {
-  height: inherit;
-}
-
-.header-item__links a {
-  height: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 rem(20);
-}
-
-.header__underline {
+.header__nav-item--underline {
   position: relative;
 }
 
-.header__underline::after {
+.header__nav-item--underline::after {
   background: $white_pure;
   bottom: rem(20);
   content: "";
@@ -123,13 +143,13 @@
   opacity: 0;
 }
 
-.header__underline:hover::after {
+.header__nav-item--underline:hover::after {
   transform: scale(1, 1);
   transform-origin: center top;
   opacity: 0.7;
 }
 
-.header__underline:not(:hover)::after {
+.header__nav-item--underline:not(:hover)::after {
   transform: scale(0, 1);
   transform-origin: center top;
   opacity: 0;

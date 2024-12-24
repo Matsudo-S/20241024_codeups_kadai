@@ -76,7 +76,9 @@ body.is-loading {
   }
 }
 
+// ok
 .fv__content {
+  color: $white_pure;
   position: absolute;
   text-align: center;
   top: 49%;
@@ -84,32 +86,14 @@ body.is-loading {
   left: 50%;
   z-index: 100;
   transform: translate(-50%,-50%);
-  opacity: 0;
+  // opacity: 0;
   transition: all 0.7s ease;
   @include mq("md") {
     top: 52%;
-    // left: 51.5%;
-    left: 50%;
   }
 }
 
-.fv__content.js-visible--loading {
-  transition: opacity 2s;
-  opacity: 1;
-  color: $main-accent-color;
-}
-
-.fv__content.js-visible {
-  transition: opacity 2s;
-  opacity: 1;
-}
-
-.fv__content.js-hidden {
-  opacity: 0;
-}
-
 .fv__content-title {
-  color: $white_pure;
   font-family: $font-family-lato;
   font-size: rem(40);
   font-weight: $regular;
@@ -127,7 +111,6 @@ body.is-loading {
 }
 
 .fv__content-subtitle {
-  color: $white_pure;
   font-family: $second-font-family;
   font-size: rem(20); 
   font-weight: $normal;
@@ -141,6 +124,33 @@ body.is-loading {
   }
 }
 
+// ok
+.fv__content.js-visible--loading {
+  transition: opacity 1s ease color 0.5s ease;
+  opacity: 1;
+  color: $main-accent-color;
+}
+
+.fv__content.js-visible {
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.fv__content.js-hidden {
+  opacity: 0;
+}
+
+// 新しく追加するスタイル
+// .header.is-visible,
+// .fv__content.is-visible {
+//   opacity: 1;
+//   visibility: visible;
+// }
+
+// .header.is-hidden {
+//   opacity: 0;
+//   transition: opacity 0.5s ease;
+// }
 
 .fv__slider {
   height: 100vh;
