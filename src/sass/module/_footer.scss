@@ -7,9 +7,11 @@
 .footer-layout {
   margin-top: rem(70);
   padding-top: rem(49);
+  padding-bottom: rem(56);
   @include mq("md") {
     margin-top: rem(160);
     padding-top: rem(73);
+    padding-bottom: rem(80);
   }
 }
 
