@@ -1,80 +1,103 @@
 @use "global" as *;
 
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    // defaultの部分をコメントアウト　カードの高さを文字が増えてもそろえるため、
+    // display: block;　
+    margin-left: auto;
+    margin-right: auto;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
 .slick-slide {
-  margin: 0 rem(24);
-  @include mq("md") {
-    margin-right: rem(18);
-  }
-}
+    float: left;
+    // height: 100%;
+    min-height: 1px;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
 
-.slick-arrow {
-  position: relative;
-}
+    display: none;
 
-.slick-arrow::before{
-  content: "";
-  height: rem(6);
-  position: absolute;
-  width: rem(40);
-  top: rem(37);
-}
+    &.dragging img {
+        pointer-events: none;
+    }
 
-.slick-prev.slick-arrow::before{
-  border-bottom: 1px solid $main-accent-color;
-  border-left: 1px solid $main-accent-color;
-  transform: skew(-47deg);
-  left: rem(21);
-}
+    .slick-initialized & {
+        display: block;
+    }
 
-.slick-next.slick-arrow::before{
-  border-bottom: 1px solid $main-accent-color;
-  border-right: 1px solid $main-accent-color;
-  transform: skew(47deg);
-  right: rem(21);
-}
+    .slick-loading & {
+        visibility: hidden;
+    }
 
-.slick-next {
-  display: none;
-  @include mq("md") {
-    width: rem(80);
-    height: rem(80);
-    border: 1px solid $main-accent-color;
-    border-radius: 9999px;
-    position: absolute;
-    display: block;
-    margin: 0;
-    transition: 0.6s;
-    cursor: pointer;
-    top: rem(-106);
-    right: calc(23% - rem(110));
-  }
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
 }
-
-.slick-next:hover{
-  opacity: 0.7;
-}
-
-.slick-prev {
-  display: none;
-  @include mq("md") {
-    width: rem(80);
-    height: rem(80);
-    border: 1px solid $main-accent-color;
-    border-radius: 9999px;
-    position: absolute;
-    display: block;
-    margin: 0;
-    transition: 0.6s;
-    cursor: pointer;
-    top: rem(-106);
-    right: calc(34% - rem(90));
-  }
-}
-
-.slick-prev:hover{
-  opacity: 0.7;
-}
-
-.slick-list.draggable {
-  padding-bottom: rem(4);
+.slick-arrow.slick-hidden {
+    display: none;
 }

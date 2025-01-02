@@ -33,13 +33,19 @@
   <link rel="preload" as="image" href="./assets/images/top_fv_pc_04.jpg">
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"> -->
+  
+  <!-- slick css -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/slick.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/slick-theme.css">
+
   <!-- JavaScript -->
+  <!-- <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
   <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script defer src="./assets/js/jquery.inview.min.js"></script>
-  <script defer src="./assets/js/script.js"></script>
+  <script defer src="./assets/js/slick.min.js"></script>
+  <script defer src="./assets/js/main.js"></script>
 </head>
 
 <body>
@@ -51,12 +57,6 @@
             <img src="./assets/images/common/common_logo-white.svg" alt="CodeUps">
           </a>
         </h1>
-        <!-- <h1 class="header__name">
-          <a href="./index.html" class="header__logo">
-            <img src="./assets/images/common/common_logo-white.svg" alt="CodeUps">
-          </a>
-        </h1> -->
-
         <nav class="header__nav u-desktop">
           <ul class="header__nav-list">
             <li class="header__nav-item header__nav-item--underline">
@@ -116,84 +116,9 @@
           <span></span>
           <span></span>
         </div> 
-        <!-- <nav class="header__nav-main u-desktop">
-          <ul class="header__nav-main-items header-items">
-            <li class="header__nav-main-item header-item header__underline">
-              <div class="header-item__links">
-                <a href="./campaign.html">
-                  <div class="header-item__main">campaign</div>
-                  <div class="header-item__sub">キャンペーン</div>
-                </a>
-              </div>
-            </li>
-            <li class="header__nav-main-item header-item header__underline">
-              <div class="header-item__links">
-                <a href="./campaign.html">
-                  <div class="header-item__main">about&nbsp;us</div>
-                  <div class="header-item__sub">私たちについて</div>
-                </a>
-              </div>
-            </li>
-            <li class="header__nav-main-item header-item header__underline">
-              <div class="header-item__links">
-                <a href="./campaign.html">
-                  <div class="header-item__main">information</div>
-                  <div class="header-item__sub">ダイビング情報</div>
-                </a>
-              </div>
-            </li>
-            <li class="header__nav-main-item header-item header__underline">
-              <div class="header-item__links">
-                <a href="./campaign.html">
-                  <div class="header-item__main">blog</div>
-                  <div class="header-item__sub">ブログ</div>
-                </a>
-              </div>
-            </li>
-            <li class="header__nav-main-item header-item header__underline">
-              <div class="header-item__links">
-                <a href="./campaign.html">
-                  <div class="header-item__main">voice</div>
-                  <div class="header-item__sub">お客様の声</div>
-                </a>
-              </div>
-            </li>
-            <li class="header__nav-main-item header-item header__underline">
-              <div class="header-item__links">
-                <a href="./campaign.html">
-                  <div class="header-item__main">price</div>
-                  <div class="header-item__sub">料金一覧</div>
-                </a>
-              </div>
-            </li>
-            <li class="header__nav-main-item header-item header__underline">
-              <div class="header-item__links">
-                <a href="./campaign.html">
-                  <div class="header-item__main header-item__main--upper">faq</div>
-                  <div class="header-item__sub">よくある質問</div>
-                </a>
-              </div>
-            </li>
-            <li class="header__nav-main-item header-item header__underline">
-              <div class="header-item__links">
-                <a href="./campaign.html">
-                  <div class="header-item__main">contact</div>
-                  <div class="header-item__sub">お問合せ</div>
-                </a>
-              </div>
-            </li>
-          </ul>
-        </nav> 
- -->
-  
 
       <nav class="drawer-menu js-drawer u-mobile">
         <div class="drawer-menu__inner">
-          <div class="drawer-menu__header">
-            <a href="./index.html" class="drawer--menu__header-logo">
-              <img src="./assets/images/common/common_logo-white.svg" alt="CodeUps">
-            </a>
-          </div>
           <div class="drawer-menu__lists">
             <div class="drawer-menu__left">
     
@@ -209,7 +134,7 @@
                           <li class="menu-list-sub__item"><a href="./campaign.html#night-diving" class="menu-list-sub__link">ナイトダイビング</a></li>
                         </ul>
                       </li>
-                      <li class="menu-list__item--about-us menu-list-main">
+                      <li class="menu-list__item menu-list-main">
                         <a href="./about-us.html" class="menu-list-main__link">私たちについて</a>
                       </li>
                     </ul>
@@ -221,7 +146,7 @@
                 <nav class="menu-lists__wrap menu-list">
                   <div class="menu-list__inner">
                     <ul class="menu-list__items menu-list-main">
-                      <li class="menu-list__item--diving menu-list-main">
+                      <li class="menu-list__item menu-list-main">
                         <a href="./infomation.html" class="menu-list-main__link">ダイビング情報</a>
                         <ul class="menu-list-sub">
                           <li class="menu-list-sub__item"><a href="./information.html#license" class="menu-list-sub__link">ライセンス取得</a></li>
@@ -229,7 +154,7 @@
                           <li class="menu-list-sub__item"><a href="./information.html#fun-diving" class="menu-list-sub__link">ファンダイビング</a></li>
                         </ul>
                       </li>
-                      <li class="menu-list__item--blog menu-list-main">
+                      <li class="menu-list__item menu-list-main">
                         <a href="./blog.html" class="menu-list-main__link">ブログ</a>
                       </li>
                     </ul>
@@ -249,7 +174,7 @@
                       <li class="menu-list__item menu-list-main">
                         <a href="./voice.html" class="menu-list-main__link">お客様の声</a>
                       </li>
-                      <li class="menu-list__item--price menu-list-main">
+                      <li class="menu-list__item menu-list-main">
                         <a href="./price.html" class="menu-list-main__link">料金一覧</a>
                         <ul class="menu-list-sub">
                           <li class="menu-list-sub__item"><a href="./information.html#license" class="menu-list-sub__link">ライセンス講習</a></li>
@@ -267,16 +192,16 @@
                 <nav class="menu-lists__wrap menu-list">
                   <div class="menu-list__inner">
                     <ul class="menu-list__items menu-list-main">
-                      <li class="menu-list__item--faq menu-list-main">
+                      <li class="menu-list__item menu-list-main">
                         <a href="./faq.html" class="menu-list-main__link">よくある質問</a>
                       </li>
-                      <li class="menu-list__item--privacy menu-list-main">
+                      <li class="menu-list__item menu-list-main">
                         <a href="./privacy-policy.html" class="menu-list-main__link">プライバシー<span class="br u-mobile">ポリシー</span></a>
                       </li>
-                      <li class="menu-list__item--terms menu-list-main">
+                      <li class="menu-list__item menu-list-main">
                         <a href="./terms-of-service.html" class="menu-list-main__link">利用規約</a>
                       </li>
-                      <li class="menu-list__item--contact menu-list-main">
+                      <li class="menu-list__item menu-list-main">
                         <a href="./contact.html" class="menu-list-main__link">お問い合わせ</a>
                       </li>
                     </ul>
@@ -295,15 +220,16 @@
       <!-- fv -->
       <section id="fv" class="fv js-fv">
         <div class="fv__inner">
-          <div class="fv__loading">
-            <div class="fv__loading-container js-fv__loading-container">
+          <div class="fv__loading js-fv__loading">
+            <div class="fv__loading-container ">
               <div class="fv__loading-image fv__loading-image--left"></div>
               <div class="fv__loading-image fv__loading-image--right"></div>
             </div>
-            <div class="fv__content js-fv__content">
-              <h2 class="fv__content-title">diving</h2>
-              <p class="fv__content-subtitle">into&nbsp;the&nbsp;ocean</p>
-            </div>
+          </div>
+          
+          <div class="fv__content js-fv__content">
+            <h2 class="fv__content-title">diving</h2>
+            <p class="fv__content-subtitle">into&nbsp;the&nbsp;ocean</p>
           </div>
 
           <div class="fv__slider js-fv__slider">
@@ -653,7 +579,7 @@
                 </div> <!-- End of card__header -->
 
                 <div class="card__body">
-                  <p class="voice__card-text card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                  <p class="voice__card-text card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                 </div>
               </li>
             </ul>
@@ -841,7 +767,7 @@
                           <li class="menu-list-sub__item"><a href="./campaign.html#night-diving" class="menu-list-sub__link">ナイトダイビング</a></li>
                         </ul>
                       </li>
-                      <li class="menu-list-main menu-list__item--about-us">
+                      <li class="menu-list-main menu-list__item">
                         <a href="./about-us.html" class="menu-list-main__link">私たちについて</a>
                       </li>
                     </ul>
@@ -853,7 +779,7 @@
                 <nav class="menu-lists__wrap menu-list">
                   <div class="menu-list__inner">
                     <ul class="menu-list__items menu-list-main">
-                      <li class="menu-list-main menu-list__item--diving">
+                      <li class="menu-list-main menu-list__item">
                         <a href="./infomation.html" class="menu-list-main__link">ダイビング情報</a>
                         <ul class="menu-list-sub">
                           <li class="menu-list-sub__item"><a href="./information.html#license" class="menu-list-sub__link">ライセンス講習</a></li>
@@ -861,7 +787,7 @@
                           <li class="menu-list-sub__item"><a href="./information.html#fun-diving" class="menu-list-sub__link">ファンダイビング</a></li>
                         </ul>
                       </li>
-                      <li class="menu-list-main menu-list__item--blog">
+                      <li class="menu-list-main menu-list__item">
                         <a href="./blog.html" class="menu-list-main__link">ブログ</a>
                       </li>
                     </ul>
@@ -880,7 +806,7 @@
                       <li class="menu-list__item menu-list-main">
                         <a href="./voice.html" class="menu-list-main__link">お客様の声</a>
                       </li>
-                      <li class="menu-list-main menu-list__item--price">
+                      <li class="menu-list-main menu-list__item">
                         <a href="./price.html" class="menu-list-main__link">料金一覧</a>
                         <ul class="menu-list-sub">
                           <li class="menu-list-sub__item"><a href="./information.html#license" class="menu-list-sub__link">ライセンス講習</a></li>
@@ -898,16 +824,16 @@
                 <nav class="menu-lists__wrap menu-list">
                   <div class="menu-list__inner">
                     <ul class="menu-list__items menu-list-main">
-                      <li class="menu-list-main menu-list__item--faq">
+                      <li class="menu-list-main menu-list__item">
                         <a href="./faq.html" class="menu-list-main__link">よくある質問</a>
                       </li>
-                      <li class="menu-list-main menu-list__item--privacy">
+                      <li class="menu-list-main menu-list__item">
                         <a href="./privacy-policy.html" class="menu-list-main__link">プライバシー<span class="br">ポリシー</span></a>
                       </li>
-                      <li class="menu-list-main menu-list__item--terms">
+                      <li class="menu-list-main menu-list__item">
                         <a href="./terms-of-service.html" class="menu-list-main__link">利用規約</a>
                       </li>
-                      <li class="menu-list-main menu-list__item--contact">
+                      <li class="menu-list-main menu-list__item">
                         <a href="./contact.html" class="menu-list-main__link">お問い合わせ</a>
                       </li>
                     </ul>
@@ -919,7 +845,7 @@
             </div> <!-- End of footer__right -->
           </div> <!-- End of footer__menu-lists -->
         </div>
-        <div class="footer__copyright-margin">
+        <div class="footer__copyright-layout">
           <small class="footer__copyright">
             Copyright&nbsp;&copy;&nbsp;2021&nbsp;-&nbsp;2023&nbsp;CodeUps&nbsp;LLC.&nbsp;All&nbsp;Rights&nbsp;Reserved.
           </small>

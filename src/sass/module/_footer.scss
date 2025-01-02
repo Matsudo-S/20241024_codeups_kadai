@@ -6,24 +6,20 @@
 
 .footer-layout {
   margin-top: rem(70);
-  padding: rem(49) 0 rem(56);
+  padding-top: rem(49);
   @include mq("md") {
     margin-top: rem(160);
-    padding: rem(73) rem(40);
-  }
-}
-
-.footer-layout {
-  // background-color: $main-accent-color;
-  padding: rem(49) rem(0) rem(56);
-  @include mq("md") {
-    padding: rem(73) rem(0) rem(40);
+    padding-top: rem(73);
   }
 }
 
 .footer__title {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
   @include mq("md") {
-    display: flex;
+    flex-direction: row;
+    gap: rem(40);
   }
 }
 
@@ -37,19 +33,18 @@
 
 .footer__sns {
   display: flex;
-  margin-left: rem(-7);
+  gap: rem(16);
   margin-top: rem(7);
   @include mq("md") {
-    margin-left: rem(40);
     margin-top: rem(38);
   }
 }
 
 .footer__menu-lists-layout { // 32 + sns-iconのpadding 8pxで計40px
   margin-left: rem(22);
-  margin-top: rem(-10);
+  margin-top: rem(40);
   @include mq("md") {
-    margin-top: rem(-16);
+    margin-top: rem(32);
   }
 }
 
@@ -90,7 +85,7 @@
   }
 }
 
-.footer__copyright-margin {
+.footer__copyright-layout {
   margin-top: rem(30);
   text-align: center;
   white-space: nowrap;

@@ -47,13 +47,6 @@
   }
 }
 
-.colorbox.voice__colorbox {
-  margin-top: rem(14.4);
-  @include mq("md") {
-    margin-top: 0;
-  }
-}
-
 .cards.voice_cards {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -77,7 +70,7 @@
   overflow: hidden;
   @include mq("md") {
     -webkit-line-clamp: 7;
-  line-clamp: 7;
+    line-clamp: 7;
   }
 }
 

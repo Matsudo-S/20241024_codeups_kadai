@@ -24,18 +24,11 @@
   align-items: center;
   flex-direction: column;
   opacity: 1;
-  transition: opacity 2s;
+  transition: opacity 2s ease-in-out;
 }
 
-.fv__loading.is-animation {
-  position: fixed;
-}
-
-スクロール禁止のスタイルを削除
-body.is-loading {
-  position: fixed;
-  width: 100%;
-  top: 0;
+.fv__loading.is-fadeout {
+  opacity: 0;
 }
 
 .fv__loading-container {
@@ -76,17 +69,19 @@ body.is-loading {
   }
 }
 
+// .fv__loading.js-fv__loading {
+//   display: none;
+// }
+
 // ok
 .fv__content {
   color: $white_pure;
   position: absolute;
   text-align: center;
   top: 49%;
-  // left: 52.7%;
   left: 50%;
   z-index: 100;
   transform: translate(-50%,-50%);
-  // opacity: 0;
   transition: all 0.7s ease;
   @include mq("md") {
     top: 52%;
@@ -103,8 +98,7 @@ body.is-loading {
   text-transform: uppercase;
   @include mq("md") {
   font-size: rem(80);
-  line-height: 0.8;  
-  // letter-spacing: 2.62rem;
+  line-height: 1.5;  
   letter-spacing: .53em;
   text-indent: .53em;
   }
@@ -118,9 +112,8 @@ body.is-loading {
   line-height: 1;
   margin-right: rem(25);
   @include mq("md") {
-    line-height: 3.2;
-    margin-top: rem(6);
-    // margin-right: rem(45);
+    line-height: 1.5;
+    margin-top: rem(25);
   }
 }
 
@@ -139,18 +132,6 @@ body.is-loading {
 .fv__content.js-hidden {
   opacity: 0;
 }
-
-// 新しく追加するスタイル
-// .header.is-visible,
-// .fv__content.is-visible {
-//   opacity: 1;
-//   visibility: visible;
-// }
-
-// .header.is-hidden {
-//   opacity: 0;
-//   transition: opacity 0.5s ease;
-// }
 
 .fv__slider {
   height: 100vh;

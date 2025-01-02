@@ -124,6 +124,7 @@ function animateColorBox(color, image, speed) {
 }
 
 initColorBox();
+animateColorBox();
 });
 
 
@@ -168,9 +169,9 @@ jQuery(function ($) {
 
 function confirm_session_storage() {
   const isFirstLoad = sessionStorage.getItem('isFirstLoad');
-  const $loadingContainer = $('.js-fv__loading-container');
+  // const $loadingContainer = $('.js-fv__loading-container');
+  const $loadingContainer = $('.js-fv__loading');
   const $header = $('.header');
-  const $fvTitle = $('.js-fv__content');
 
   
   window.addEventListener('load', function() {
@@ -179,18 +180,13 @@ function confirm_session_storage() {
       initialShowAndHideTitle();
       initFvAnimation();
       initLoadingCompletion();
+
       sessionStorage.setItem('isFirstLoad', true);
     } else {
       // 2回目以降
       $loadingContainer.hide();
-      
       $header.addClass('is-active');
-      // $header.css({
-      //   'transition': 'opacity 0s ease-in-out',
-      //   'opacity': '1',
-      //   'visibility': 'visible'
-      // });
-
+      
       init_fv_slider(0);
     }
   });
@@ -227,7 +223,8 @@ function initialShowAndHideTitle() {
 /* fv ローディングアニメーションとswiper */
 function initFvAnimation() {
   const $title = $(".js-fv__content");
-  const $animationContainer = $(".js-fv__loading-container");
+  // const $animationContainer = $(".js-fv__loading-container");
+  const $animationContainer = $(".js-fv__loading");
   const $header = $(".js-top-header");
   const $loading = $(".fv__loading");
   const $leftImage = $('.fv__loading-image--left');
@@ -256,34 +253,27 @@ function initFvAnimation() {
 
   // アニメーション完了を待ってから次の処理を実行
   $rightImage.on('animationend', function() {
-    hideAnimationAndStartSwiper($animationContainer, $header, $title, $loading);
+    hideAnimationAndStartSlider($animationContainer, $header, $title, $loading);
   });
 }
 
-function hideAnimationAndStartSwiper($animationContainer, $header, $title, $loading) {
+function hideAnimationAndStartSlider($animationContainer, $header, $title, $loading) {
   const $slider = $('.js-fv__slider');
   $slider.css('opacity', '1');
   
-  // 初期状態でfixedにしてスクロールを禁止
-  $loading.addClass('is-animation');
-  $('body').addClass('is-loading');
-
   init_fv_slider(1);
 
-  // ローディングアニメーションを実行
-  $animationContainer.delay(1000).fadeOut(2000, function() {
-    
-    // アニメーション完了時にfixedを解除してスクロールを有効化
-    $loading.removeClass('is-animation');
-    
-    // スライダーをフェードインさせてから自動再生開始
+  // ローディングアニメーションをフェードアウト
+  $animationContainer.addClass('is-fadeout');
+  
+  // フェードアウトのトランジション時間後にスライダーをフェードイン
+  setTimeout(() => {
     $slider.animate({
       opacity: 1
     }, 1000, function() {
       $slider.slick('slickPlay');
     });
-
-  });
+  }, 2000);
 }
 
 function initLoadingCompletion() {

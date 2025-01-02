@@ -31,8 +31,7 @@
     width: rem(437);
     aspect-ratio: 437 / 201;
     position: absolute;
-    // left: rem(-55);
-    left: calc(50% - min(44vw, 38.5rem));
+    left: calc(50% - min(48vw, 38.5rem));
     top: rem(-74);
 
   }
@@ -51,7 +50,6 @@
   grid-template-columns: repeat(1, 1fr);
   row-gap: rem(44.8);
   margin: auto;
-  
   @include mq("md") {
     grid-template-columns: repeat(3, 1fr);
     column-gap: rem(40);
@@ -67,7 +65,6 @@
 
 .blog__card.card  {
   @include mq("md") {
-    // min-height: rem(447); 
     padding: rem(18);
   }
   
@@ -78,10 +75,8 @@
 }
 .blog__card-top {
   margin-top: rem(14.4);
-  margin-left: rem(6.2);
   @include mq("md") {
     margin-top: rem(27.5);
-    // margin-left: rem(-5.3);
   }
   
 }
@@ -111,18 +106,14 @@
 .card__body.blog__card-body {
   width: 95%;
   margin-top: rem(17);
-  margin-left: rem(9);
   @include mq("md") {
     width: 100%;
-    margin-left: 0;
     margin-top: rem(40);
   }
 }
 
 .blog__btn--layout {
   margin-top: rem(47);
-  // display: flex;
-  // justify-content: center;
   text-align: center;
   @include mq("md") {
     margin-top: rem(80);

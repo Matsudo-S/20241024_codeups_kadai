@@ -3,6 +3,7 @@
 // 本体のスクロール制御用のクラス
 body.is-drawer-active {
   overflow: hidden;
+  background-color: $main-accent-color;
 }
 
 .drawer-menu {
@@ -39,11 +40,11 @@ body.is-drawer-active {
 }
 
 .drawer-menu__lists {
-  margin-top: rem(5);
+  margin-top: rem(104);
+  padding-bottom: rem(40);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: rem(30);
-  // padding-bottom: rem(76);
 }
 
 .drawer__menu-list {

@@ -23,9 +23,8 @@
     width: rem(194);
     height: rem(181);
     position: absolute;
-    // right: rem(81);
-    right: calc(50% - min(44vw, 39rem));
-    bottom: rem(-90);
+    right: calc(50% - min(48vw, 39rem));
+    bottom: rem(-154);
   }
 }
 .about__contents {
@@ -51,26 +50,24 @@
 .about__image {
   position: relative;
   display: flex;
+  aspect-ratio: 1080 / 660;
 }
 
 .about__image-background {
   width: 81.5%;
-  height: rem(186);
   aspect-ratio: 281 / 186;
   object-fit: cover;
   z-index: -1;
   position: absolute;
-  top: rem(95);
-  left: rem(68);
+  right: 0;
+  bottom: 0;
   @include mq(md){
-    height: rem(581);
     aspect-ratio: 880 / 581;
-    left: rem(200);
-    top: rem(40);
   }
 }
 
 .about__image-forward {
+  position: absolute;
   width: 37%;
   aspect-ratio: 128 / 194;
   object-fit: cover;
@@ -114,7 +111,6 @@
 
 .about__btn {
   margin-top: rem(24.8);
-  // margin-right: rem(13);
   text-align: center;
   @include mq("md") {
     margin-top: rem(40);
