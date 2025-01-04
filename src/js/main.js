@@ -85,46 +85,46 @@ initScrollToTopButton();
 // color box
 jQuery(function ($) {
 // ----------------------------------------------
-function initColorBox() {
-  const speed = 500;
-  const $box = $(".js-colorbox");
-  
+  function initColorBox() {
+    const speed = 500;
+    const $box = $(".js-colorbox");
+    
 
-  $box.each(function() {
-    const $currentBox = $(this);
-    $currentBox.append('<div class="js-color"></div>');
-    const $color = $currentBox.find(".js-color");
-    const $image = $currentBox.find("img");
-    let counter = 0;
+    $box.each(function() {
+      const $currentBox = $(this);
+      $currentBox.append('<div class="js-color"></div>');
+      const $color = $currentBox.find(".js-color");
+      const $image = $currentBox.find("img");
+      let counter = 0;
 
-    $image.css("opacity", "0");
-    $color.css("width", "0%");
+      $image.css("opacity", "0");
+      $color.css("width", "0%");
 
-    // 画像がビューポート内に入ったらアニメーションを実行
-    $currentBox.on("inview", function(event, isInView) {
-      if (isInView && counter === 0) {
-        $color.animate({ width: "100%" }, speed * 1.5, function() {
-          $image.css("opacity", "1");
-          $color.css({
-            left: "0",
-            right: "auto"
-          }).animate({ width: "0%" }, speed * 0.7);
-        });
-        counter = 1;
-      }
+      // 画像がビューポート内に入ったらアニメーションを実行
+      $currentBox.on("inview", function(event, isInView) {
+        if (isInView && counter === 0) {
+          $color.animate({ width: "100%" }, speed * 1.5, function() {
+            $image.css("opacity", "1");
+            $color.css({
+              left: "0",
+              right: "auto"
+            }).animate({ width: "0%" }, speed * 0.7);
+          });
+          counter = 1;
+        }
+      });
     });
-  });
-}
+  }
 
-function animateColorBox(color, image, speed) {
-  color.animate({ width: "100%" }, speed * 1.5, function() {
-    image.css("opacity", "1");
-    color.css({ left: "0", right: "auto" }).animate({ width: "0%" }, speed * 0.7);
-  });
-}
+  function animateColorBox(color, image, speed) {
+    color.animate({ width: "100%" }, speed * 1.5, function() {
+      image.css("opacity", "1");
+      color.css({ left: "0", right: "auto" }).animate({ width: "0%" }, speed * 0.7);
+    });
+  }
 
-initColorBox();
-animateColorBox();
+  initColorBox();
+  animateColorBox();
 });
 
 
@@ -175,15 +175,15 @@ function confirm_session_storage() {
 
   
   window.addEventListener('load', function() {
+    // 初回アクセス時
     if (!isFirstLoad) {
-      // 初回アクセス時
       initialShowAndHideTitle();
       initFvAnimation();
       initLoadingCompletion();
 
       sessionStorage.setItem('isFirstLoad', true);
+    // 2回目以降
     } else {
-      // 2回目以降
       $loadingContainer.hide();
       $header.addClass('is-active');
       
