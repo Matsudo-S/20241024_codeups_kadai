@@ -69,7 +69,7 @@
   }
 }
 
-// .fv__loading.js-fv__loading {
+// .fv__loading.js-fv-loading {
 //   display: none;
 // }
 
@@ -140,7 +140,7 @@
   
 }
 
-.fv__slider .slider__item {
+.fv__slider-img {
   height: inherit;
 }
 
@@ -149,8 +149,8 @@
   margin: 0;
 }
 
-.fv__slider .slider__item img,
-.fv__slider .slider__item picture {
+.fv__slider-img img,
+.fv__slider-img picture {
   height: inherit;
   object-fit: cover;
 }

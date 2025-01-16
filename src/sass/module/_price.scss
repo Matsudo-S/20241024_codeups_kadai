@@ -9,7 +9,7 @@
   }
 }
 
-.price-layout {
+.layout-price {
   background-color: $blue-white;
   margin-top: rem(80);
   @include mq("md") {
@@ -82,15 +82,15 @@
   }
 }
 
-.price__images {
+.price__img {
   width: 100%;
   @include mq("md") {
     width: 45.5%;
   }
 }
 
-.price__images img,
-.price__images picture {
+.price__img img,
+.price__img picture {
   aspect-ratio: 345 / 227;
   @include mq("md") {
     aspect-ratio: 492 / 746;
@@ -98,31 +98,10 @@
   }
 }
 
-.price__btn .btn {
-  display: inline-block;
-}
-
-.price__btn--layout {
+.price__btn {
   margin-top: rem(38);
   text-align: center;
   @include mq("md") {
     margin-top: rem(92);
   }
-}
-
-.price__btn--layout .btn {
-  display: inline-block;
-}
-
-.price-btn__layout--center {
-  margin-top: rem(40);
-  display: flex;
-  justify-content: center;
-  @include mq("md") {
-    margin-top: rem(94);
-  }
-}
-
-.price-btn__layout--center .btn {
-  display: inline-block;
 }

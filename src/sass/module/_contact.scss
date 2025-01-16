@@ -1,16 +1,14 @@
 @use "global" as *;
 
-.contact-layout {
+.layout-contact {
   margin-top: rem(70);
-  // padding-bottom: rem(75);
   position: relative;
   @include mq("md") {
     margin-top: rem(140);
-    // padding-bottom: rem(160);
   }
 }
 
-.contact-layout::before {
+.layout-contact::before {
   content: "";
   position: absolute;
   top: rem(-20);
@@ -27,7 +25,6 @@
     top: rem(-40);
     width: rem(301);
     aspect-ratio: 301 / 138;
-    // right: rem(81);
     right: calc(50% - min(46.5vw, rem(671)));
   }
 }
@@ -57,12 +54,12 @@
 }
 
 .contact__right {
-  margin-top: rem(40);
+  // margin-top: rem(40);
   text-align: center;
   position: relative;
   @include mq("md") {
     width: 46%;
-    margin-top: rem(29);
+    // margin-top: rem(29);
     padding-left: rem(67);
   }
 }
@@ -79,7 +76,6 @@
   }
 }
 .contact__logo {
-  width: 100%;
   padding: rem(6) rem(0);
   @include mq("md") {
     padding: rem(8) rem(0);
@@ -95,49 +91,7 @@
   }
 }
 
-.contact__section-title-main {
-  line-height: 1;
-  font-size: rem(80);
-  font-family: $second-font-family;
-  font-weight: $regular;
-}
-
-.contact__section-title-main::first-letter {
-  text-transform: capitalize;
-  color: $main-accent-color;
-}
-
-.contact__section-title-sub {
-  color: $main-accent-color;
-  font-size: rem(12);
-  line-height: 1.5;
-  font-weight: $regular;
-  margin-top: rem(-7);
-  letter-spacing: 0.01rem;
-  @include mq("md") {
-    margin-top: rem(-6);
-  }
-}
-
-.contact__title {
-  margin-top: rem(-5);
-  margin-left: rem(-7);
-  @include mq("md") {
-    margin: 0 rem(15);
-  }
-  
-}
-
-.contact__text {
-  margin-top: rem(8);
-  font-size: rem(14);
-  line-height: 1.285;
-  color: $main-accent-color;
-  font-weight: $regular;
-  
-}
-
-.contact__map {
+.contact__body {
   margin-top: rem(20);
   @include mq("md") {
     margin-top: rem(28);
@@ -147,7 +101,40 @@
   }
 }
 
-.contact__map-main {
+.contact__info {
+  @include mq("md") {
+    min-width: rem(169);
+  }
+}
+
+.contact__address {
+  line-height: 1.9;
+  font-weight: $regular;
+  font-size: rem(14);
+  letter-spacing: 0.01rem;
+  @include mq("md") {
+    letter-spacing: 0;
+    line-height: 1.4;
+    font-size: rem(16);  
+  }
+}
+
+// 電話番号について、PCでは発信できないようにする
+.contact__tel a[href^="tel:"] {
+  pointer-events: auto;
+  @include mq("md") {
+    pointer-events: none;
+  }
+}
+
+.contact__closed-day {
+  @include mq("md") {
+    margin-top: rem(5.5);
+  }
+  
+}
+
+.contact__map {
   margin-top: rem(16);
   width: 100%;
   margin-inline: auto;
@@ -162,7 +149,7 @@
   }
 }
 
-.contact__map-main iframe {
+.contact__map iframe {
   width: 100%;
   margin-inline: auto;
   width: rem(295);
@@ -173,45 +160,42 @@
   }
 }
 
-.contact__map-information {
-  @include mq("md") {
-    min-width: rem(169);
-    margin-top: rem(-2);
-  }
-}
 
-.contact-information__item {
-  line-height: 1.9;
+.contact__title-main {
+  line-height: 1;
+  font-size: rem(80);
+  font-family: $second-font-family;
   font-weight: $regular;
-  font-size: rem(14);
+}
+
+.contact__title-main::first-letter {
+  text-transform: capitalize;
+  color: $main-accent-color;
+}
+
+.contact__title-sub {
+  color: $main-accent-color;
+  font-size: rem(12);
+  line-height: 1.5;
+  font-weight: $regular;
   letter-spacing: 0.01rem;
+}
+
+.contact__title {
   @include mq("md") {
-    letter-spacing: 0;
-    line-height: 1.4;
-    font-size: rem(16);  
+    margin: 0 rem(15);
   }
 }
 
-// 電話番号について、PCでは発信できないようにする
-.contact-information__item a[href^="tel:"] {
-  pointer-events: auto;
-  @include mq("md") {
-    pointer-events: none;
-  }
-}
-
-.contact-information__item:not(:first-child) {
-  @include mq("md") {
-    margin-top: rem(5.5);
-    letter-spacing: -0.07em;
-  }
-  
+.contact__text {
+  margin-top: rem(8);
+  font-size: rem(14);
+  line-height: 1.285;
+  color: $main-accent-color;
+  font-weight: $regular;  
 }
 
 .contact__btn {
   margin-top: rem(38);
-  margin-left: rem(-4);
-  @include mq("md") {
-    margin-left: rem(-6);
-  }
+  text-align: center;
 }

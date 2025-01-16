@@ -1,18 +1,19 @@
 @use "global" as *;
 
-.about__inner {
-  @include mq("md") {
-    position: relative;
-  }
-}
-
-.about-layout {
+.layout-about {
   margin-top: rem(80);
   @include mq("md") {
     margin-top: rem(140);
     position: relative;
   }
 }
+
+.about__inner {
+  @include mq("md") {
+    position: relative;
+  }
+}
+
 
 .about-layout::before {
   @include mq(md){
@@ -47,13 +48,13 @@
   }
 }
 
-.about__image {
+.about__img {
   position: relative;
   display: flex;
   aspect-ratio: 1080 / 660;
 }
 
-.about__image-background {
+.about__img-background {
   width: 81.5%;
   aspect-ratio: 281 / 186;
   object-fit: cover;
@@ -66,7 +67,7 @@
   }
 }
 
-.about__image-forward {
+.about__img-forward {
   position: absolute;
   width: 37%;
   aspect-ratio: 128 / 194;
@@ -81,6 +82,7 @@
   font-size: rem(40);
   font-family: $second-font-family;
   font-weight: $regular;
+  color: $main-accent-color;
   line-height: 1;
   @include mq(md){
     font-size: rem(80);
@@ -89,6 +91,9 @@
   }
 }
 
+.about__header p:nth-child(1)::first-letter {
+  text-transform: uppercase;
+}
 
 .about__body {
   margin-top:  rem(21);
@@ -98,9 +103,6 @@
   }
 }
 
-.about__initial {
-  text-transform: uppercase;
-}
 
 .about__text {
   line-height: 1.5;

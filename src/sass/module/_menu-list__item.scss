@@ -7,63 +7,21 @@
   }
 }
 
-// .menu-list__item--about-us {
-//   margin-top: rem(35);
-//   @include mq("md") {
-//     margin-top: rem(40);
-//   }
-// }
+// PCとSP両方でマージンを0にする要素（キャンペーンとお客様の声）
+.menu-list__items:nth-of-type(1) .menu-list__item:first-child,
+.menu-list__items:nth-of-type(3) .menu-list__item:first-child {
+  margin-top: 0;
+}
 
-// .menu-list__item--diving {
-//   margin-top: rem(33);
-//   @include mq("md") {
-//     margin-top: rem(40);
-//   }
-// }
+// PCのみでマージンを0にする要素（ダイビング情報とよくある質問）
+.menu-list__items:nth-of-type(2) .menu-list__item:first-child,
+.menu-list__items:nth-of-type(4) .menu-list__item:first-child {
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
 
-// .menu-list__item--blog {
-//   margin-top: rem(34);
-//   @include mq("md") {
-//     margin-top: rem(40);
-//   }
-// }
-
-// .menu-list__item--price {
-//   margin-top: rem(34);
-//   @include mq("md") {
-//     margin-top: rem(40);
-//   }
-// }
-
-// .menu-list__item--faq {
-//   margin-top: rem(34);
-//   @include mq("md") {
-//     margin-top: rem(40);
-//   }
-// }
-
-// .menu-list__item--privacy {
-//   margin-top: rem(35);
-//   @include mq("md") {
-//     margin-top: rem(40);
-//   }
-// }
-
-// .menu-list__item--terms {
-//   margin-top: rem(38);
-//   @include mq("md") {
-//     margin-top: rem(40);
-//   }
-// }
-
-// .menu-list__item--contact {
-//   margin-top: rem(34.8);
-//   @include mq("md") {
-//     margin-top: rem(40);
-//   }
-// }
-
-.menu-list-main__link {
+.menu-list-main a {
   color: $white_pure;
   font-weight: $bold;
   font-size: rem(16);
@@ -71,7 +29,7 @@
   position: relative;
 }
 
-.menu-list-main__link::before {
+.menu-list-main a::before {
   background-image: url("../images/common/common_hitode.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -82,11 +40,11 @@
   margin-left: rem(-24);
 }
 
-.menu-list-main__link:hover {
+.menu-list-main a:hover {
   opacity: 0.7;
 }
 
-.menu-list-sub__item {
+.menu-list-main__item {
   margin-top: rem(18);
   margin-left: rem(2);
   @include mq("md") {
@@ -95,11 +53,11 @@
   }
 }
 
-.menu-list-sub__link {
+.menu-list-main__item a {
   color: $white_pure;
 }
 
-.menu-list-sub__link:hover {
+.menu-list-main__item a:hover {
   opacity: 0.7;
 }
 

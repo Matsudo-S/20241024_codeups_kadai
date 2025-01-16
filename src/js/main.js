@@ -128,9 +128,9 @@ jQuery(function ($) {
 });
 
 
-// campaign scroll
+// campaign slick slider
 jQuery(function ($) {
-const $card__slider = $('.slider');
+const $card__slider = $('.js-campaign-slider');
 function initSlick() {
   $($card__slider).slick({
     arrows: true,
@@ -169,8 +169,8 @@ jQuery(function ($) {
 
 function confirm_session_storage() {
   const isFirstLoad = sessionStorage.getItem('isFirstLoad');
-  // const $loadingContainer = $('.js-fv__loading-container');
-  const $loadingContainer = $('.js-fv__loading');
+  // const $loadingContainer = $('.js-fv-loading-container');
+  const $loadingContainer = $('.js-fv-loading');
   const $header = $('.header');
 
   
@@ -192,9 +192,9 @@ function confirm_session_storage() {
   });
 }
 
-// fv スライダー
+// fv slick slider
 function init_fv_slider($initialSlide) {
-  const $slider = $('.js-fv__slider');
+  const $slider = $('.js-fv-slider');
   $slider.slick({
     arrows: false,
     autoplay: true,
@@ -209,7 +209,7 @@ function init_fv_slider($initialSlide) {
 }
 
 function initialShowAndHideTitle() {
-  const $title = $(".js-fv__content");
+  const $title = $(".js-fv-content");
 
 // タイトルを同時に表示し、1秒後にヘッダーをフェードアウト
   $title.addClass('js-visible--loading');
@@ -222,9 +222,9 @@ function initialShowAndHideTitle() {
 
 /* fv ローディングアニメーションとswiper */
 function initFvAnimation() {
-  const $title = $(".js-fv__content");
-  // const $animationContainer = $(".js-fv__loading-container");
-  const $animationContainer = $(".js-fv__loading");
+  const $title = $(".js-fv-content");
+  // const $animationContainer = $(".js-fv-loading-container");
+  const $animationContainer = $(".js-fv-loading");
   const $header = $(".js-top-header");
   const $loading = $(".fv__loading");
   const $leftImage = $('.fv__loading-image--left');
@@ -258,7 +258,7 @@ function initFvAnimation() {
 }
 
 function hideAnimationAndStartSlider($animationContainer, $header, $title, $loading) {
-  const $slider = $('.js-fv__slider');
+  const $slider = $('.js-fv-slider');
   $slider.css('opacity', '1');
   
   init_fv_slider(1);
@@ -280,7 +280,7 @@ function initLoadingCompletion() {
   $(document).ready(function() {
     const header = $('.header');
     const fvLoading = $('.fv__loading');
-    const fvTitle = $('.js-fv__content');
+    const fvTitle = $('.js-fv-content');
 
     fvLoading.on('animationend', function() {
       setTimeout(() => {

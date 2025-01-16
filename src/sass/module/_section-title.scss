@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.section-title {
+  text-align: center; 
+}
+
 .section-title__main {
   line-height: 1.25;
   font-size: rem(32);
@@ -45,8 +49,3 @@
     color: $white_pure;
   }
 }
-
-.section-title--center {
-  text-align: center; 
-}
-

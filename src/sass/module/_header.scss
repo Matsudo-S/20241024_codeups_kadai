@@ -16,7 +16,7 @@
   visibility: visible;
 }
 
-.header-layout {
+.layout-header {
   position: fixed;
   z-index: 900;
   top: 0;
@@ -81,7 +81,7 @@
   }
 }
 
-.header__nav-list {
+.header__nav-items {
   display: flex;
   height: inherit;
   gap: rem(40);
@@ -96,22 +96,22 @@
 }
 
 
-.header-item__main {
+.header__item-main {
   color: $white_pure;
   font-family: $second-font-family;
   font-size: rem(18);
   line-height: 1;
 }
 
-.header-item__main::first-letter {
+.header__item-main::first-letter {
   text-transform: uppercase;
 }
 
-.header-item__main.header-item__main--upper {
+.header__item-main.header__item-main--upper {
   text-transform: uppercase;
 }
 
-.header-item__sub {
+.header__item-sub {
   color: $white_pure;
   font-family: $base-font-family;
   font-size: rem(10);

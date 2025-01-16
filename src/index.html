@@ -33,15 +33,10 @@
   <link rel="preload" as="image" href="./assets/images/top_fv_pc_04.jpg">
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
-  
-  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"> -->
-  
   <!-- slick css -->
   <link rel="stylesheet" type="text/css" href="./assets/css/slick.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/slick-theme.css">
-
   <!-- JavaScript -->
-  <!-- <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
   <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script defer src="./assets/js/jquery.inview.min.js"></script>
   <script defer src="./assets/js/slick.min.js"></script>
@@ -50,7 +45,7 @@
 
 <body>
   <div class="body-wrap">
-    <header class="header header-layout js-header">
+    <header class="header js-header layout-header">
       <div class="header__inner">
         <h1 class="header__logo">
           <a href="./index.html">
@@ -58,66 +53,66 @@
           </a>
         </h1>
         <nav class="header__nav u-desktop">
-          <ul class="header__nav-list">
+          <ul class="header__nav-items ">
             <li class="header__nav-item header__nav-item--underline">
               <a href="./campaign.html">
-                <div class="header-item__main">campaign</div>
-                <div class="header-item__sub">キャンペーン</div>
+                <div class="header__item-main">campaign</div>
+                <div class="header__item-sub">キャンペーン</div>
               </a>
             </li>
             <li class="header__nav-item header__nav-item--underline">
               <a href="./about-us.html">
-                <div class="header-item__main">about&nbsp;us</div>
-                <div class="header-item__sub">私たちについて</div>
+                <div class="header__item-main">about&nbsp;us</div>
+                <div class="header__item-sub">私たちについて</div>
               </a>
             </li>
             <li class="header__nav-item header__nav-item--underline">
               <a href="./infomation.html">
-                <div class="header-item__main">information</div>
-                <div class="header-item__sub">ダイビング情報</div>
+                <div class="header__item-main">information</div>
+                <div class="header__item-sub">ダイビング情報</div>
               </a>
             </li>
             <li class="header__nav-item header__nav-item--underline">
               <a href="./blog.html">
-                <div class="header-item__main">blog</div>
-                <div class="header-item__sub">ブログ</div>
+                <div class="header__item-main">blog</div>
+                <div class="header__item-sub">ブログ</div>
               </a>
             </li>
             <li class="header__nav-item header__nav-item--underline">
               <a href="./voice.html">
-                <div class="header-item__main">voice</div>
-                <div class="header-item__sub">お客様の声</div>
+                <div class="header__item-main">voice</div>
+                <div class="header__item-sub">お客様の声</div>
               </a>
             </li>
             <li class="header__nav-item header__nav-item--underline">
               <a href="./price.html">
-                <div class="header-item__main">price</div>
-                <div class="header-item__sub">料金一覧</div>
+                <div class="header__item-main">price</div>
+                <div class="header__item-sub">料金一覧</div>
               </a>
             </li>
             <li class="header__nav-item header__nav-item--underline">
               <a href="./faq.html">
-                <div class="header-item__main header-item__main--upper">faq</div>
-                <div class="header-item__sub">よくある質問</div>
+                <div class="header__item-main header__item-main--upper">faq</div>
+                <div class="header__item-sub">よくある質問</div>
               </a>
             </li>
             <li class="header__nav-item header__nav-item--underline">
               <a href="./contact.html">
-                <div class="header-item__main">contact</div>
-                <div class="header-item__sub">お問い合わせ</div>
+                <div class="header__item-main">contact</div>
+                <div class="header__item-sub">お問い合わせ</div>
               </a>
             </li>
           </ul>
         </nav>
       </div> <!-- End of header__inner -->
 
-        <div class="hamburger js-hamburger u-mobile">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div> 
+      <div class="header__hamburger hamburger js-hamburger u-mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div> 
 
-      <nav class="drawer-menu js-drawer u-mobile">
+      <nav class="header__drawer drawer-menu js-drawer u-mobile">
         <div class="drawer-menu__inner">
           <div class="drawer-menu__lists">
             <div class="drawer-menu__left">
@@ -125,44 +120,44 @@
               <div class="drawer__menu-list menu-lists">
                 <nav class="menu-lists__wrap menu-list">
                   <div class="menu-list__inner">
-                    <ul class="menu-list__items menu-list-main">
+                    <ul class="menu-list__items">
                       <li class="menu-list__item menu-list-main">
-                        <a href="./campaign.html" class="menu-list-main__link">キャンペーン</a>
-                        <ul class="menu-list-sub">
-                          <li class="menu-list-sub__item"><a href="./campaign.html#license" class="menu-list-sub__link">ライセンス取得</a></li>
-                          <li class="menu-list-sub__item"><a href="./campaign.html#private-diving" class="menu-list-sub__link">貸切体験ダイビング</a></li>
-                          <li class="menu-list-sub__item"><a href="./campaign.html#night-diving" class="menu-list-sub__link">ナイトダイビング</a></li>
+                        <a href="./campaign.html">キャンペーン</a>
+                        <ul class="menu-list-main__items">
+                          <li class="menu-list-main__item"><a href="./campaign.html#license">ライセンス取得</a></li>
+                          <li class="menu-list-main__item"><a href="./campaign.html#private-diving">貸切体験ダイビング</a></li>
+                          <li class="menu-list-main__item"><a href="./campaign.html#night-diving">ナイトダイビング</a></li>
                         </ul>
                       </li>
                       <li class="menu-list__item menu-list-main">
-                        <a href="./about-us.html" class="menu-list-main__link">私たちについて</a>
+                        <a href="./about-us.html">私たちについて</a>
                       </li>
                     </ul>
                   </div>
                 </nav> <!-- End of menu-list -->  
-              </div> <!-- End of drawer-menu-list -->
+              </div> <!-- End of menu-lists -->
     
               <div class="drawer__menu-list menu-lists">
                 <nav class="menu-lists__wrap menu-list">
                   <div class="menu-list__inner">
-                    <ul class="menu-list__items menu-list-main">
+                    <ul class="menu-list__items">
                       <li class="menu-list__item menu-list-main">
-                        <a href="./infomation.html" class="menu-list-main__link">ダイビング情報</a>
-                        <ul class="menu-list-sub">
-                          <li class="menu-list-sub__item"><a href="./information.html#license" class="menu-list-sub__link">ライセンス取得</a></li>
-                          <li class="menu-list-sub__item"><a href="./information.html#experience-diving" class="menu-list-sub__link">体験ダイビング</a></li>
-                          <li class="menu-list-sub__item"><a href="./information.html#fun-diving" class="menu-list-sub__link">ファンダイビング</a></li>
+                        <a href="./infomation.html">ダイビング情報</a>
+                        <ul class="menu-list-main__items">
+                          <li class="menu-list-main__item"><a href="./information.html#license">ライセンス取得</a></li>
+                          <li class="menu-list-main__item"><a href="./information.html#experience-diving">体験ダイビング</a></li>
+                          <li class="menu-list-main__item"><a href="./information.html#fun-diving">ファンダイビング</a></li>
                         </ul>
                       </li>
                       <li class="menu-list__item menu-list-main">
-                        <a href="./blog.html" class="menu-list-main__link">ブログ</a>
+                        <a href="./blog.html">ブログ</a>
                       </li>
                     </ul>
                   </div>
                 </nav> <!-- End of menu-list -->  
-              </div> <!-- End of drawer-menu-list -->
+              </div> <!-- End of menu-lists -->
     
-            </div>
+            </div> <!-- End of drawer__left -->
             
             <!-- drawer-menu__right -->
             <div class="drawer-menu__right">
@@ -170,111 +165,110 @@
               <div class="drawer__menu-list menu-lists">
                 <nav class="menu-lists__wrap menu-list">
                   <div class="menu-list__inner">
-                    <ul class="menu-list__items menu-list-main">
+                    <ul class="menu-list__items">
                       <li class="menu-list__item menu-list-main">
-                        <a href="./voice.html" class="menu-list-main__link">お客様の声</a>
+                        <a href="./voice.html">お客様の声</a>
                       </li>
                       <li class="menu-list__item menu-list-main">
-                        <a href="./price.html" class="menu-list-main__link">料金一覧</a>
-                        <ul class="menu-list-sub">
-                          <li class="menu-list-sub__item"><a href="./information.html#license" class="menu-list-sub__link">ライセンス講習</a></li>
-                          <li class="menu-list-sub__item"><a href="./information.html#experience-diving" class="menu-list-sub__link">体験ダイビング</a></li>
-                          <li class="menu-list-sub__item"><a href="./information.html#fun-diving" class="menu-list-sub__link">ファンダイビング</a></li>
+                        <a href="./price.html">料金一覧</a>
+                        <ul class="menu-list-main__items">
+                          <li class="menu-list-main__item"><a href="./information.html#license">ライセンス講習</a></li>
+                          <li class="menu-list-main__item"><a href="./information.html#experience-diving">体験ダイビング</a></li>
+                          <li class="menu-list-main__item"><a href="./information.html#fun-diving">ファンダイビング</a></li>
                         </ul>
                       </li>  
                     </ul>
                   </div>
                 </nav> <!-- End of menu-list -->  
-              </div> <!-- End of drawer-menu-list -->
+              </div> <!-- End of menu-lists -->
     
               
               <div class="drawer__menu-list menu-lists">
                 <nav class="menu-lists__wrap menu-list">
                   <div class="menu-list__inner">
-                    <ul class="menu-list__items menu-list-main">
+                    <ul class="menu-list__items">
                       <li class="menu-list__item menu-list-main">
-                        <a href="./faq.html" class="menu-list-main__link">よくある質問</a>
+                        <a href="./faq.html">よくある質問</a>
                       </li>
                       <li class="menu-list__item menu-list-main">
-                        <a href="./privacy-policy.html" class="menu-list-main__link">プライバシー<span class="br u-mobile">ポリシー</span></a>
+                        <a href="./privacy-policy.html">プライバシー<span class="br u-mobile">ポリシー</span></a>
                       </li>
                       <li class="menu-list__item menu-list-main">
-                        <a href="./terms-of-service.html" class="menu-list-main__link">利用規約</a>
+                        <a href="./terms-of-service.html">利用規約</a>
                       </li>
                       <li class="menu-list__item menu-list-main">
-                        <a href="./contact.html" class="menu-list-main__link">お問い合わせ</a>
+                        <a href="./contact.html">お問い合わせ</a>
                       </li>
                     </ul>
                   </div>
                 </nav> <!-- End of menu-list -->  
-              </div> <!-- End of drawer-menu-list -->
-    
+              </div> <!-- End of menu-lists -->
     
             </div> <!-- End of drawer__right -->
-          </div>
-        </div>
-      </nav> <!-- End of footer__menu -->
+          </div> <!-- End of drawer-menu__lists -->
+        </div> <!-- End of drawer-menu__inner -->
+      </nav> <!-- End of drawer-menu -->
     </header>
 
     <main class="main-wrap">
       <!-- fv -->
       <section id="fv" class="fv js-fv">
         <div class="fv__inner">
-          <div class="fv__loading js-fv__loading">
+          <div class="fv__loading js-fv-loading">
             <div class="fv__loading-container ">
               <div class="fv__loading-image fv__loading-image--left"></div>
               <div class="fv__loading-image fv__loading-image--right"></div>
             </div>
           </div>
           
-          <div class="fv__content js-fv__content">
+          <div class="fv__content js-fv-content">
             <h2 class="fv__content-title">diving</h2>
             <p class="fv__content-subtitle">into&nbsp;the&nbsp;ocean</p>
           </div>
 
-          <div class="fv__slider js-fv__slider">
-            <div class="slider__item">
+          <div class="fv__slider js-fv-slider">
+            <div class="fv__slider-img">
               <picture>
                 <source srcset="./assets/images/top_fv_sp_01.jpg" media="(max-width:767px)">
                 <img src="./assets/images/top_fv_pc_01.jpg" alt="海の中を泳いでいる亀" loading="lazy">
               </picture>
             </div>
-            <div class="slider__item">
+            <div class="fv__slider-img">
               <picture>
                 <source srcset="./assets/images/top_fv_sp_02.jpg" media="(max-width:767px)">
                 <img src="./assets/images/top_fv_pc_02.jpg" alt="海の中で亀とダイバーが遭遇した様子" loading="lazy">
               </picture>
             </div>
-            <div class="slider__item">
+            <div class="fv__slider-img">
               <picture>
                 <source srcset="./assets/images/top_fv_sp_03.jpg" media="(max-width:767px)">
                 <img src="./assets/images/top_fv_pc_03.jpg" alt="晴天と海の景色" loading="lazy">
               </picture>
             </div>
-            <div class="slider__item">
+            <div class="fv__slider-img">
               <picture>
                 <source srcset="./assets/images/top_fv_sp_04.jpg" media="(max-width:767px)">
                 <img src="./assets/images/top_fv_pc_04.jpg" alt="砂浜と晴天と海の景色" loading="lazy">
               </picture>
             </div>
           </div>
-        </div>
+        </div> <!-- End of inner -->
       </section>
 
       <!-- Campaign -->
-      <section id="campaign" class="campaign campaign-layout">
+      <section id="campaign" class="campaign layout-campaign">
         <div class="campaign__inner inner">
-          <div class="campaign__title section-title section-title--center">
+          <div class="campaign__title section-title">
             <p class="section-title__main">campaign</p>
             <h3 class="section-title__sub">キャンペーン</h3>
           </div>
     
-          <div class="campaign__contents campaign__contents-layout">
-            <ul class="slider campaign-cards">
+          <div class="campaign__contents">
+            <ul class="campaign__cards js-campaign-slider">
 
-              <li class="slider__item campaign-card">
-                <a href="./campaign.html#" class="campaign-card__link card__link">
-                  <div class="campaign-card__image">
+              <li class="campaign__card campaign-card">
+                <a href="./campaign.html#">
+                  <div class="campaign-card__img">
                     <img src="./assets/images/campaign_sec_01.jpg" alt="水中にいるたくさんの魚たち">
                   </div>
                   <div class="campaign-card__content">
@@ -289,9 +283,9 @@
                 </a>
               </li>
   
-              <li class="slider__item campaign-card">
-                <a href="./campaign.html#" class="campaign-card__link card__link">
-                  <div class="campaign-card__image">
+              <li class="campaign__card campaign-card">
+                <a href="./campaign.html#">
+                  <div class="campaign-card__img">
                     <img src="./assets/images/campaign_sec_02.jpg" alt="浜辺から見える透き通った海">
                   </div>
                   <div class="campaign-card__content">
@@ -306,9 +300,9 @@
                 </a>
               </li>
   
-              <li class="slider__item campaign-card">
-                <a href="./campaign.html#" class="campaign-card__link card__link">
-                  <div class="campaign-card__image">
+              <li class="campaign__card campaign-card">
+                <a href="./campaign.html#">
+                  <div class="campaign-card__img">
                     <img src="./assets/images/campaign_sec_03.jpg" alt="水中にいるたくさんのクラゲたち">
                   </div>
                   <div class="campaign-card__content">
@@ -323,9 +317,9 @@
                 </a>
               </li>
   
-              <li class="slider__item campaign-card">
-                <a href="./campaign.html#" class="campaign-card__link card__link">
-                  <div class="campaign-card__image">
+              <li class="campaign__card campaign-card">
+                <a href="./campaign.html#">
+                  <div class="campaign-card__img">
                     <img src="./assets/images/campaign_sec_04.jpg" alt="楽しんでいるダイバーの様子">
                   </div>
                   <div class="campaign-card__content">
@@ -343,37 +337,35 @@
             </ul>
           </div>
           
-
-          <div class="btn__layout--center">
+          <div class="campaign__btn">
             <div class="btn">
               <a href="./campaign.html">
                 <span class="btn__text">View&nbsp;more</span>
               </a>
             </div>
           </div> 
-
-        </div>
+        </div> <!-- End of inner -->
       </section>
 
 
       <!-- about-us-->
-      <section id="about" class="about about-layout">
+      <section id="about" class="about layout-about">
         <div class="about__inner inner">
-          <div class="about__title section-title section-title--center">
+          <div class="about__title section-title">
             <p class="section-title__main">about&nbsp;us</p>
             <h3 class="section-title__sub">私たちについて</h3>
           </div>
-          <div class="about__contents">
 
-            <div class="about__image">
-              <img class="about__image-forward" src="./assets/images/common/common_dive-into-ocean-01.jpg" alt="沖縄家屋の屋根のシーサーの置物" loading="lazy">
-              <img class="about__image-background" src="./assets/images/common/common_dive-into-ocean-02.jpg" alt="水中を漂う魚の画像" loading="lazy">
+          <div class="about__contents">
+            <div class="about__img">
+              <img class="about__img-forward" src="./assets/images/common/common_dive-into-ocean-01.jpg" alt="沖縄家屋の屋根のシーサーの置物" loading="lazy">
+              <img class="about__img-background" src="./assets/images/common/common_dive-into-ocean-02.jpg" alt="水中を漂う魚の画像" loading="lazy">
             </div>
 
             <div class="about__content">
               <div class="about__header">
-                <p><span class="about__initial">d</span>ive&nbsp;into</p>
-                <p>the&nbsp;<span class="about__initial">o</span>cean</p>
+                <p>dive&nbsp;into</p>
+                <p>the&nbsp;ocean</p>
               </div>
 
               <div class="about__body">
@@ -398,12 +390,13 @@
       <!-- information -->
       <section id="information" class="information information-layout">
         <div class="information__inner inner">
-          <div class="information__title section-title section-title--center">
+          <div class="information__title section-title">
             <p class="section-title__main">information</p>
             <h3 class="section-title__sub">ダイビング情報</h3>
           </div>
 
           <div class="information__contents information__contents--layout">
+
             <div class="information__img colorbox js-colorbox">
               <img src="./assets/images/top_info_01.jpg" alt="海の中で泳ぐ魚達" loading="lazy">
             </div>
@@ -430,85 +423,85 @@
 
 
       <!-- blog -->
-      <section id="blog" class="blog blog-layout">
+      <section id="blog" class="blog layout-blog">
         <div class="blog__inner inner">
-          <div class="blog__title section-title section-title--center">
+          <div class="blog__title section-title">
             <p class="section-title__main section-title__main--pc-white">blog</p>
             <h3 class="section-title__sub section-title__sub--pc-white">ブログ</h3>
           </div>
 
-          <div class="blog__contents blog__contents--layout">
+          <div class="blog__contents">
             <ul class="blog__cards">
             
-              <li class="blog__card card">
-                <a href="blog.html" class="blog__card-link card__link">
+              <li class="blog__card blog-card">
+                <a href="blog.html">
 
-                  <div class="blog__card-header">
+                  <div class="blog-card__header">
                     
-                    <div class="blog__card-img card__img">
+                    <div class="blog-card__img">
                       <img src="./assets/images/top_blog__card_01.jpg" alt="海の中の珊瑚礁" loading="lazy">
                     </div>
 
-                    <div class="blog__card-top card__top">
-                      <div class="blog__card-label card__label">
-                        <time class="blog__card-date card__date" datetime="2023-11-17">2023.11/17</time>
+                    <div class="blog-card__top">
+                      <div class="blog-card__label">
+                        <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
                       </div>
-                      <div class="blog__card-title underline--green">ライセンス取得</div>
+                      <div class="blog-card__title underline--green">ライセンス取得</div>
                     </div> <!-- End of card__top -->
                     
                   </div> <!-- End of card__header -->
   
-                  <div class="blog__card-body card__body">
-                    <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                  <div class="blog-card__body">
+                    <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                   </div>
 
                 </a>
               </li>
 
-              <li class="blog__card card">
-                <a href="blog.html" class="blog__card-link card__link">
+              <li class="blog__card blog-card">
+                <a href="blog.html">
 
-                  <div class="blog__card-header">
+                  <div class="blog-card__header">
                     
-                    <div class="blog__card-img card__img">
+                    <div class="blog-card__img">
                       <img src="./assets/images/top_blog__card_02.jpg" alt="海を泳いでいる亀" loading="lazy">
                     </div>
 
-                    <div class="blog__card-top card__top">
-                      <div class="blog__card-label card__label">
-                        <time class="blog__card-date card__date" datetime="2023-11-17">2023.11/17</time>
+                    <div class="blog-card__top">
+                      <div class="blog-card__label">
+                        <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
                       </div>
-                      <div class="blog__card-title underline--green">ウミガメと泳ぐ</div>
+                      <div class="blog-card__title underline--green">ウミガメと泳ぐ</div>
                     </div> <!-- End of card__top -->
                     
                   </div> <!-- End of card__header -->
   
-                  <div class="blog__card-body card__body">
-                    <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                  <div class="blog-card__body">
+                    <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                   </div>
 
                 </a>
               </li>
 
-              <li class="blog__card card">
-                <a href="blog.html" class="blog__card-link card__link">
+              <li class="blog__card blog-card">
+                <a href="blog.html">
 
-                  <div class="blog__card-header">
+                  <div class="blog-card__header">
                     
-                    <div class="blog__card-img card__img">
+                    <div class="blog-card__img">
                       <img src="./assets/images/top_blog__card_03.jpg" alt="カクレクマノミ" loading="lazy">
                     </div>
 
-                    <div class="blog__card-top card__top">
-                      <div class="blog__card-label card__label">
-                        <time class="blog__card-date card__date" datetime="2023-11-17">2023.11/17</time>
+                    <div class="blog-card__top">
+                      <div class="blog-card__label">
+                        <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
                       </div>
-                      <div class="blog__card-title underline--green">カクレクマノミ</div>
+                      <div class="blog-card__title underline--green">カクレクマノミ</div>
                     </div> <!-- End of card__top -->
                     
                   </div> <!-- End of card__header -->
   
-                  <div class="blog__card-body card__body">
+                  <div class="blog-card__body">
                     <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                   </div>
 
@@ -518,7 +511,7 @@
             </ul>
           </div> <!-- End of blog__contents -->
 
-          <div class="blog__btn--layout">
+          <div class="blog__btn">
             <div class="btn">
               <a href="./blog.html">
                 <span class="btn__text">View&nbsp;more</span>
@@ -531,75 +524,86 @@
 
 
       <!-- voice -->
-      <section id="voice" class="voice voice-layout">
+      <section id="voice" class="voice layout-voice">
         <div class="voice__inner inner">
-          <div class="voice__title section-title section-title--center">
+
+          <div class="voice__title section-title">
             <p class="section-title__main">voice</p>
             <h3 class="section-title__sub">お客様の声</h3>
           </div>
 
-          <div class="voice__contents voice__contents--layout">
-            <ul class="voice__cards cards">
+          <div class="voice__contents">
+            <ul class="voice__cards">
               
-              <li class="voice__card card">
-                <div class="card__header">
+              <li class="voice__card voice-card">
+                <a href="./voice.html">
 
-                  <div class="card__header-left">
-                    <div class="card__label">
-                      <div class="card__label-type">20代(女性)</div>
-                      <div class="card__label-license">ライセンス認証</div>
-                    </div>
-                    <div class="card__title underline--green">ここにタイトルが入ります。ここにタイトル</div>
-                  </div> <!-- End of card__header-left -->
-                  
-                  <div class="card__header-right voice__colorbox colorbox js-colorbox">
-                    <img src="./assets/images/top_voice_01.jpg" alt="20代女性" loading="lazy">
+                  <div class="voice-card__header">
+                     
+                    <div class="voice-card__header-contents">
+  
+                      <div class="voice-card__header-content">
+                        <div class="voice-card__type">20代(女性)</div>
+                        <div class="voice-card__license">ライセンス認証</div>
+                      </div>
+
+                      <div class="voice-card__title underline--green">ここにタイトルが入ります。ここにタイトル</div>
+                    
+                    </div> <!-- End of voice-card__header-left -->
+                    
+                    <div class="voice-card__header-img colorbox js-colorbox">
+                      <img src="./assets/images/top_voice_01.jpg" alt="20代女性" loading="lazy">
+                    </div> <!-- End of voice-card__header-right -->
+                  </div> <!-- End of voice-card__header -->
+  
+                  <div class="voice-card__body">
+                    <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                   </div>
-                </div> <!-- End of card__header -->
-
-                <div class="card__body">
-                  <p class="voice__card-text card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-                </div>
+                </a>
               </li>
 
-              <li class="cards-item card">
-                <div class="card__header">
-                  <div class="card__header-left">
-                    <div class="card__label">
-                      <div class="card__label-type">30代(女性)</div>
-                      <div class="card__label-license">ファンダイビング</div>
+              <li class="voice__card voice-card">
+                <a href="./voice.html">
+                  <div class="voice-card__header">
+
+                  <div class="voice-card__header-contents">
+
+                    <div class="voice-card__header-content">
+                      <div class="voice-card__type">30代(女性)</div>
+                      <div class="voice-card__license">ファンダイビング</div>
                     </div>
-                    <div class="card__title underline--green">ここにタイトルが入ります。ここにタイトル</div>
-                  </div> <!-- End of card__header-left -->
+                    <div class="voice-card__title underline--green">ここにタイトルが入ります。ここにタイトル</div>
+
+                  </div> <!-- End of voice-card__header-left -->
                   
-                  <div class="card__header-right voice__colorbox colorbox js-colorbox">
+                  <div class="voice-card__img colorbox js-colorbox">
                     <img src="./assets/images/top_voice_02.jpg" alt="30代女性" loading="lazy">
                   </div> 
 
-                </div> <!-- End of card__header -->
+                </div> <!-- End of voice-card__header -->
 
-                <div class="card__body">
-                  <p class="voice__card-text card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-                </div>
+                  <div class="voice-card__body">
+                    <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                  </div>
+                </a>
               </li>
             </ul>
           </div> <!-- End of voice__contents -->
 
-          <div class="voice__btn--layout">
+          <div class="voice__btn">
             <div class="btn">
               <a href="./voice.html">
                 <span class="btn__text">View&nbsp;more</span>
               </a>
             </div>
           </div> 
-
         </div>
       </section>
 
       <!-- price -->
-      <section id="price" class="price price-layout">
+      <section id="price" class="price layout-price">
         <div class="price__inner inner">
-          <div class="price__title section-title section-title--center">
+          <div class="price__title section-title">
             <p class="section-title__main">price</p>
             <h3 class="section-title__sub">料金一覧</h3>
           </div>
@@ -672,7 +676,7 @@
               </div>
             </div>
 
-            <div class="price__images colorbox js-colorbox">
+            <div class="price__img colorbox js-colorbox">
               <picture>
                 <source srcset="./assets/images/top_price_sp.jpg" media="(max-width:767px)">
                 <img src="./assets/images/top_price_pc.jpg" alt="海の中で珊瑚礁背景に小魚達が泳いでいる様子" loading="lazy">
@@ -680,7 +684,7 @@
             </div>
           </div>
 
-          <div class="price__btn--layout">
+          <div class="price__btn">
             <div class="btn">
               <a href="./price.html">
                 <span class="btn__text">View&nbsp;more</span>
@@ -693,47 +697,52 @@
       </section> 
 
       <!-- contact -->
-      <section id="contact" class="contact contact-layout">
+      <section id="contact" class="contact layout-contact">
         <div class="contact__inner inner">
           <div class="contact__contents">
               <div class="contact__left">
                   <div class="contact__logo underline--green">
                     <img src="./assets/images/common/common_logo-green.svg" alt="CodeUps">
                   </div>
-                  <div class="contact__map ">
-                    <div class="contact__map-information contact-information__items">
-                      <p class="contact-information__item">沖縄県那覇市1-1</p>
-                      <p class="contact-information__item">
+
+                  <div class="contact__body contact-info">
+                    <div class="contact__info">
+                      <address class="contact__address">沖縄県那覇市1-1</address>
+                      <p class="contact__tel">
                         <a href="tel:01200000000">TEL:0120-000-0000</a>
                       </p>
-                      <p class="contact-information__item">営業時間:8:30-19:00</p>
-                      <p class="contact-information__item">定休日:毎週火曜日</p>
+                      <p class="contact__business-hours">営業時間: <time datetime="08:30">8:30</time> - <time datetime="19:00">19:00</time></p>
+                      <p class="contact__closed-day">定休日:毎週火曜日</p>
                     </div>
-                    <div class="contact__map-main">
+                    <div class="contact__map">
                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57272.985336974925!2d127.64341661461147!3d26.210936362853207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1731292658378!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                   </div>
               </div>
 
               <div class="contact__right">
+
                 <div class="contact__title section-title">
-                  <p class="contact__section-title-main">contact</p>
-                  <h3 class="contact__section-title-sub">お問い合わせ</h3>
+                  <p class="contact__title-main">contact</p>
+                  <h3 class="contact__title-sub">お問い合わせ</h3>
                 </div>
                 <p class="contact__text">ご予約・お問い合わせはコチラ</p>
-                <div class="contact__btn btn">
-                  <a href="./contact.html">
-                    <span class="btn__text">contact&nbsp;us</span>
-                  </a>
+
+                <div class="contact__btn">
+                  <div class="btn">
+                    <a href="./contact.html">
+                      <span class="btn__text">contact&nbsp;us</span>
+                    </a>
+                  </div>
                 </div>
-              </div>
+              </div> <!-- End of contact__right -->
           </div>
         </div>
       </section>
       <button class="scroll-to-top-btn"></button>
     </main>
     
-    <footer class="footer footer-layout">
+    <footer class="footer layout-footer">
       <div class="footer__inner inner">
         <div class="footer__wrap">
           <div class="footer__title">
@@ -751,102 +760,93 @@
             </div>
           </div>
           
-          <div class="footer__menu-lists footer__menu-lists-layout">
-            <div class="footer__left">
+          <div class="footer__nav">
+            <div class="footer__nav-left">
 
               <!-- pcで4分割するためのlist -->
-              <div class="footer__menu-list menu-lists">
-                <nav class="menu-lists__wrap menu-list">
+              <div class="footer__menu-lists menu-lists">
+                <nav class="footer__menu-list menu-list">
                   <div class="menu-list__inner">
-                    <ul class="menu-list__items menu-list-main">
+                    <ul class="menu-list__items">
                       <li class="menu-list__item menu-list-main">
-                        <a href="./campaign.html" class="menu-list-main__link">キャンペーン</a>
-                        <ul class="menu-list-sub">
-                          <li class="menu-list-sub__item"><a href="./campaign.html#license" class="menu-list-sub__link">ライセンス取得</a></li>
-                          <li class="menu-list-sub__item"><a href="./campaign.html#private-diving" class="menu-list-sub__link">貸切体験ダイビング</a></li>
-                          <li class="menu-list-sub__item"><a href="./campaign.html#night-diving" class="menu-list-sub__link">ナイトダイビング</a></li>
+                        <a href="./campaign.html">キャンペーン</a>
+                        <ul class="menu-list-main__items">
+                          <li class="menu-list-main__item"><a href="./campaign.html#license">ライセンス取得</a></li>
+                          <li class="menu-list-main__item"><a href="./campaign.html#private-diving">貸切体験ダイビング</a></li>
+                          <li class="menu-list-main__item"><a href="./campaign.html#night-diving">ナイトダイビング</a></li>
                         </ul>
                       </li>
                       <li class="menu-list-main menu-list__item">
-                        <a href="./about-us.html" class="menu-list-main__link">私たちについて</a>
+                        <a href="./about-us.html">私たちについて</a>
                       </li>
                     </ul>
                   </div>
                 </nav> <!-- End of menu-list -->  
               </div> <!-- End of footer-menu-list -->
 
-              <div class="footer__menu-list menu-lists">
-                <nav class="menu-lists__wrap menu-list">
+              <div class="footer__menu-lists menu-lists">
+                <nav class="footer__menu-list menu-list">
                   <div class="menu-list__inner">
-                    <ul class="menu-list__items menu-list-main">
-                      <li class="menu-list-main menu-list__item">
-                        <a href="./infomation.html" class="menu-list-main__link">ダイビング情報</a>
-                        <ul class="menu-list-sub">
-                          <li class="menu-list-sub__item"><a href="./information.html#license" class="menu-list-sub__link">ライセンス講習</a></li>
-                          <li class="menu-list-sub__item"><a href="./information.html#experience-diving" class="menu-list-sub__link">体験ダイビング</a></li>
-                          <li class="menu-list-sub__item"><a href="./information.html#fun-diving" class="menu-list-sub__link">ファンダイビング</a></li>
+                    <ul class="menu-list__items">
+                      <li class="menu-list__item menu-list-main">
+                        <a href="./infomation.html">ダイビング情報</a>
+                        <ul class="menu-list-main__items">
+                          <li class="menu-list-main__item"><a href="./information.html#license">ライセンス講習</a></li>
+                          <li class="menu-list-main__item"><a href="./information.html#experience-diving">体験ダイビング</a></li>
+                          <li class="menu-list-main__item"><a href="./information.html#fun-diving">ファンダイビング</a></li>
                         </ul>
                       </li>
                       <li class="menu-list-main menu-list__item">
-                        <a href="./blog.html" class="menu-list-main__link">ブログ</a>
+                        <a href="./blog.html">ブログ</a>
                       </li>
                     </ul>
                   </div>
                 </nav> <!-- End of menu-list -->  
               </div> <!-- End of footer-menu-list -->
 
-            </div>
-            <!-- footer__right -->
-            <div class="footer__right">
+            </div> <!-- End of footer__nav-left -->
 
-              <div class="footer__menu-list menu-lists">
-                <nav class="menu-lists__wrap menu-list">
+            <div class="footer__nav-right">
+
+              <div class="footer__menu-lists menu-lists">
+                <nav class="footer__menu-list menu-list">
                   <div class="menu-list__inner">
-                    <ul class="menu-list__items menu-list-main">
+                    <ul class="menu-list__items">
                       <li class="menu-list__item menu-list-main">
-                        <a href="./voice.html" class="menu-list-main__link">お客様の声</a>
+                        <a href="./voice.html">お客様の声</a>
                       </li>
-                      <li class="menu-list-main menu-list__item">
-                        <a href="./price.html" class="menu-list-main__link">料金一覧</a>
-                        <ul class="menu-list-sub">
-                          <li class="menu-list-sub__item"><a href="./information.html#license" class="menu-list-sub__link">ライセンス講習</a></li>
-                          <li class="menu-list-sub__item"><a href="./information.html#experience-diving" class="menu-list-sub__link">体験ダイビング</a></li>
-                          <li class="menu-list-sub__item"><a href="./information.html#fun-diving" class="menu-list-sub__link">ファンダイビング</a></li>
+                      <li class="menu-list__item menu-list-main">
+                        <a href="./price.html">料金一覧</a>
+                        <ul class="menu-list-main__items">
+                          <li class="menu-list-main__item"><a href="./information.html#license">ライセンス講習</a></li>
+                          <li class="menu-list-main__item"><a href="./information.html#experience-diving">体験ダイビング</a></li>
+                          <li class="menu-list-main__item"><a href="./information.html#fun-diving">ファンダイビング</a></li>
                         </ul>
                       </li>  
                     </ul>
                   </div>
                 </nav> <!-- End of menu-list -->  
               </div> <!-- End of footer-menu-list -->
-
               
-              <div class="footer__menu-list menu-lists">
-                <nav class="menu-lists__wrap menu-list">
+              <div class="footer__menu-lists menu-lists">
+                <nav class="footer__menu-list menu-list">
                   <div class="menu-list__inner">
-                    <ul class="menu-list__items menu-list-main">
-                      <li class="menu-list-main menu-list__item">
-                        <a href="./faq.html" class="menu-list-main__link">よくある質問</a>
-                      </li>
-                      <li class="menu-list-main menu-list__item">
-                        <a href="./privacy-policy.html" class="menu-list-main__link">プライバシー<span class="br">ポリシー</span></a>
-                      </li>
-                      <li class="menu-list-main menu-list__item">
-                        <a href="./terms-of-service.html" class="menu-list-main__link">利用規約</a>
-                      </li>
-                      <li class="menu-list-main menu-list__item">
-                        <a href="./contact.html" class="menu-list-main__link">お問い合わせ</a>
-                      </li>
+                    <ul class="menu-list__items">
+                      <li class="menu-list__item menu-list-main"><a href="./faq.html">よくある質問</a></li>
+                      <li class="menu-list__item menu-list-main"><a href="./privacy-policy.html">プライバシー<span class="br">ポリシー</span></a></li>
+                      <li class="menu-list__item menu-list-main"><a href="./terms-of-service.html">利用規約</a></li>
+                      <li class="menu-list__item menu-list-main"><a href="./contact.html">お問い合わせ</a></li>
                     </ul>
                   </div>
                 </nav> <!-- End of menu-list -->  
               </div> <!-- End of footer-menu-list -->
 
 
-            </div> <!-- End of footer__right -->
-          </div> <!-- End of footer__menu-lists -->
+            </div> <!-- End of footer__nav-right -->
+          </div> <!-- End of footer__nav -->
         </div>
-        <div class="footer__copyright-layout">
-          <small class="footer__copyright">
+        <div class="footer__copyright">
+          <small class="footer__copyright-text">
             Copyright&nbsp;&copy;&nbsp;2021&nbsp;-&nbsp;2023&nbsp;CodeUps&nbsp;LLC.&nbsp;All&nbsp;Rights&nbsp;Reserved.
           </small>
         </div>

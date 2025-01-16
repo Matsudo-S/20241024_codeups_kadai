@@ -4,7 +4,7 @@
   background-color: $main-accent-color;
 }
 
-.footer-layout {
+.layout-footer {
   margin-top: rem(70);
   padding-top: rem(49);
   padding-bottom: rem(56);
@@ -42,32 +42,25 @@
   }
 }
 
-.footer__menu-lists-layout { // 32 + sns-iconのpadding 8pxで計40px
-  margin-left: rem(22);
-  margin-top: rem(40);
-  @include mq("md") {
-    margin-top: rem(32);
-  }
-}
-
-.footer__menu-lists {
+.footer__nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: rem(12);
+  margin-left: rem(22);
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(29);
+  }
 }
 
-.footer__menu-list {
-  width: 100%;
-}
-
-.footer__left {
+.footer__nav-left {
   display: block;
   @include mq("md") {
     display: flex;
   }
 }
 
-.footer__right {
+.footer__nav-right {
   display: block;
   margin-left: rem(16);
   @include mq("md") {
@@ -76,7 +69,21 @@
   }
 }
 
+.footer__menu-lists {
+  width: 100%;
+}
+
+
 .footer__copyright {
+  margin-top: rem(30);
+  text-align: center;
+  white-space: nowrap;
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.footer__copyright-text {
   font-family: $second-font-family;
   color: $white_pure;
   font-size: rem(12);
@@ -86,13 +93,3 @@
     line-height: 1.125;
   }
 }
-
-.footer__copyright-layout {
-  margin-top: rem(30);
-  text-align: center;
-  white-space: nowrap;
-  @include mq("md") {
-    margin-top: rem(40);
-  }
-}
-

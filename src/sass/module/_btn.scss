@@ -81,15 +81,3 @@
   border-bottom: 1px solid $main-accent-color;
   border-right: 1px solid $main-accent-color;
 }
-
-.btn__layout--center {
-  margin-top: rem(40);
-  text-align: center;
-  @include mq("md") {
-    margin-top: rem(80);
-  }
-}
-
-.btn__layout--center .btn {
-  display: inline-block;
-}

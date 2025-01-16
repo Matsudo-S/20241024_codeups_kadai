@@ -4,7 +4,7 @@
   overflow-x: hidden;
 }
 
-.campaign-layout {
+.layout-campaign {
   margin-top: rem(40);
   @include mq(md) {
     margin-top: rem(120);
@@ -15,22 +15,15 @@
   position: relative;
 }
 
-.campaign__contents-layout {
+.campaign__contents {
   margin-top: rem(28);
   @include mq(md) {
     margin-top: rem(40);
   }
 }
 
-.campaign-cards {
+.campaign__cards {
   margin-right: calc(50% - 50vw);
-
-  .slick-track {
-    &::before,
-    &::after {
-      display: none !important;
-    }
-  }
 }
 
 .campaign-card {
@@ -43,6 +36,10 @@
   }
 }
 
+.campaign-card a:hover {
+  opacity: 0.7;
+}
+
 .campaign-card__content {
   padding: rem(16) rem(16) rem(24);
   @include mq(md){
@@ -50,7 +47,7 @@
   }
 }
 
-.campaign-card__image img {
+.campaign-card__img img {
   aspect-ratio: 280 / 188;
   object-fit: cover;
   @include mq(md){
@@ -148,3 +145,14 @@
   }
 }
 
+.campaign__btn {
+  margin-top: rem(40);
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.campaign__btn .btn {
+  display: inline-block;
+}
