@@ -21,7 +21,8 @@
   }
 }
 
-.menu-list-main a {
+// メインメニューのリンクスタイル
+.menu-list-main > a {
   color: $white_pure;
   font-weight: $bold;
   font-size: rem(16);
@@ -29,7 +30,8 @@
   position: relative;
 }
 
-.menu-list-main a::before {
+// メインメニューのヒトデアイコン（サブメニューには適用しない）
+.menu-list-main > a::before {
   background-image: url("../images/common/common_hitode.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -44,7 +46,9 @@
   opacity: 0.7;
 }
 
+// サブメニューのスタイル
 .menu-list-main__item {
+  font-weight: $regular;
   margin-top: rem(18);
   margin-left: rem(2);
   @include mq("md") {
