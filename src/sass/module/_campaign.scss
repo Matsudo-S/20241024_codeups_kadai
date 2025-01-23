@@ -15,15 +15,15 @@
   position: relative;
 }
 
-.campaign__contents {
+// .campaign__contents {
+// }
+
+.campaign__cards {
+  margin-right: calc(50% - 50vw);
   margin-top: rem(28);
   @include mq(md) {
     margin-top: rem(40);
   }
-}
-
-.campaign__cards {
-  margin-right: calc(50% - 50vw);
 }
 
 .campaign-card {
