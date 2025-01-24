@@ -37,7 +37,7 @@
   text-transform: uppercase;
 }
 
-
+// breadcrumb
 .breadcrumb__items {
   display: flex;
   flex-wrap: wrap;
@@ -61,6 +61,9 @@
 .breadcrumb__item a:hover {
   opacity: 0.7;
 }
+
+// -------------------------------------
+
 
 // 以下sub-blogクラス
 .layout-sub-blog {
@@ -269,45 +272,53 @@
   right: 40%;
   transform: translateY(-50%) rotate(45deg);
 }
+// -------------------------------------
 
-
-// 以下サイドバー
+// 以下sidebar 別ページにする予定
 .sub-blog__sidebar {
     margin-top: rem(80);
     @include mq(md) {
         margin-top: 0;
-        margin-left: rem(64);
-        width: 35%;
+        margin-left: rem(80);
+        width: 27%;
     }
 }
 
-.sub-blog__sidebar-item {
-    padding-top: rem(24);
-    position: relative;
-    border-top: 1px solid rgba($color: #234F5E, $alpha: .2);
+.sidebar__title {
+  position: relative;
+  padding-top: rem(7.5);
+  padding-bottom: rem(7.5);
+  padding-left: rem(74);
+  font-size: rem(24);
+  font-weight: $regular;
+  line-height: calc(29 / 24);
+  border-left: rem(8) solid $main-accent-color;
 }
 
-.sub-blog__sidebar-item + .sub-blog__sidebar-item {
+.sidebar__title::before {
+    content: "";
+    background-image: url("../images/common/common_kujira-black.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(50);
+    aspect-ratio: 50 / 50;
+    position: absolute;
+    z-index: -1;
+    top: rem(-2);
+}
+
+
+
+.sub-blog__sidebar-item {
+    // padding-top: rem(24);
+    position: relative;
+    
+}
+
+.sidebar__item + .sidebar__item {
     margin-top: rem(64);
 }
 
-.sub-blog__sidebar-item::before {
-    content: "";
-    position: absolute;
-    top: rem(-1);
-    left: 0;
-    width: rem(80);
-    height: 1px;
-    background-color: #73B2C8;
-}
-
-.sub-blog__sidebar-title {
-    padding-bottom: rem(24);
-    font-size: rem(18);
-    font-weight: 700;
-    line-height: 1;
-    border-bottom: 1px solid rgba($color: #234F5E, $alpha: .2);
-}
 
 .sub-blog__ranking-link {
     padding: rem(24) 0;
@@ -403,5 +414,59 @@
 .sub-blog__tag-link {
     font-size: rem(12);
     line-height: 1;
+}
+
+.sidebar__list {
+  margin-top: rem(24);
+}
+
+.popular-lists__list + .popular-lists__list {
+  margin-top: rem(24);
+}
+
+.popular-list__link {
+  display: block;
+  padding: rem(16);
+  background-color: $white_pure;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+  transition: opacity 0.3s;
+  display: flex;
+  gap: rem(16);
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.popular-list__img {
+  position: relative;
+  width: rem(100);
+  flex-shrink: 0;
+  img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.popular-list__content {
+  flex-grow: 1;
+}
+
+.popular-list__date {
+  display: inline-block;
+  font-size: rem(12);
+  line-height: 1.5;
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: $main-font-color;
+}
+
+.popular-list__title {
+  margin-top: rem(4);
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: 1.5;
+  padding-bottom: rem(4);
 }
 
